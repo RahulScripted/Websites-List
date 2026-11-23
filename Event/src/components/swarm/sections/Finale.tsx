@@ -24,7 +24,7 @@ export function Finale({ c }: { c: SwarmContent }) {
           <ul>{crew.map((m) => <li key={m.name} data-k="credit" style={{ "--c": m.color } as CSSVars}><i aria-hidden="true" />{m.name}</li>)}</ul>
         </div>
       </div>
-      <p className="ov-fine" data-calm data-k="foot">{finale.fine}</p>
+      <p className="ov-fine !mt-10 " data-calm data-k="foot">{finale.fine}</p>
       <Hands crew={crew} ids={ids(crew, crew.length, 0)} />
     </section>
   )

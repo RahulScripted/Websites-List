@@ -9,6 +9,7 @@ import { Idea } from "@/components/swarm/sections/Idea"
 import { Speakers } from "@/components/swarm/sections/Speakers"
 import { Programme } from "@/components/swarm/sections/Programme"
 import { Passes } from "@/components/swarm/sections/Passes"
+import { Faq } from "@/components/swarm/sections/Faq"
 import { Finale } from "@/components/swarm/sections/Finale"
 import "@/components/swarm/swarm.css"
 
@@ -37,6 +38,7 @@ export default function Swarm({ content, start = true, height = "100svh", classN
   // Go live, then rebuild whenever fonts land or the width really changes: every target is measured.
   useEffect(() => {
     if (!start) return
+    window.scrollTo(0, 0)
     setLive(true)
     let cancelled = false
     const bump = () => { if (!cancelled) setLayout((n) => n + 1) }
@@ -81,6 +83,7 @@ export default function Swarm({ content, start = true, height = "100svh", classN
       <Speakers c={content} />
       <Programme c={content} />
       <Passes c={content} />
+      <Faq c={content} />
       <Finale c={content} />
     </div>
   )

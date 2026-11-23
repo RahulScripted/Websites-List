@@ -30,7 +30,7 @@ export default function App() {
       // The page has sticky sections, so the wrapper must not clip. The curtain is fixed to the viewport.
       className="overflow-visible"
       introClassName="fixed"
-      greetingClassName="font-[Archivo,'Noto_Sans_Devanagari','Noto_Sans_Tamil','Noto_Sans_Bengali',sans-serif]"
+      greetingClassName="font-[Archivo,'Noto_Sans_Devanagari','Noto_Sans_Tamil','Noto_Sans_Bengali','Noto_Sans_Malayalam',sans-serif]"
     >
       <Swarm content={CONTENT} start={ready} />
     </ArcRevealHero>

@@ -7,6 +7,7 @@ import { idea } from "@/components/swarm/lib/scenes/idea"
 import { speakersBuild } from "@/components/swarm/lib/scenes/speakers"
 import { programme } from "@/components/swarm/lib/scenes/programme"
 import { passesBuild } from "@/components/swarm/lib/scenes/passes"
+import { faqBuild } from "@/components/swarm/lib/scenes/faq"
 import { finale } from "@/components/swarm/lib/scenes/finale"
 import type { SwarmContent } from "@/types/swarm"
 
@@ -37,6 +38,7 @@ export function buildAll(root: HTMLElement, passes: SwarmContent["passes"]) {
     if (kind === "speakers") speakersBuild(D, q, qa, narrow)
     if (kind === "programme") programme(D, tl, q, qa)
     if (kind === "passes") passesBuild(D, q, qa, passes)
+    if (kind === "faq") faqBuild(D, q, qa, narrow)
     if (kind === "finale") finale(D, tl, q, qa)
 
     tl.to({}, { duration: 0.4 })

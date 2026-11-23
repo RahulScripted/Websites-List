@@ -38,6 +38,10 @@ export interface Pass {
   stamp?: string
 }
 
+export interface FaqItem {
+  question: string
+  answer: string
+}
 export interface Ink {
   name: string
   code: string
@@ -104,6 +108,7 @@ export interface SwarmContent {
     menus: { copy: string[]; paste: string[]; stamp: string[] }
     pasteKey: string
   }
+  faq: { label: string; title: string; intro: string; listAria: string; items: FaqItem[] }
   finale: {
     line1: string
     line2: string

@@ -12,9 +12,9 @@ import type { SwarmContent } from "@/types/swarm"
  */
 export const CONTENT: SwarmContent = {
   seo: {
-    title: "Chhaap ’27 | Mumbai",
+    title: "Chhaap ’27 — Made by Many, Mumbai",
     description:
-      "Chhaap ’27 is a two-day festival of collaborative making in Mumbai, 13–14 May 2027, for designers, engineers, printers and writers.",
+      "Two days of ideas, design, print and collective creativity. Chhaap ’27 brings designers, makers, engineers and storytellers together in Mumbai, 13–14 May 2027.",
   },
 
   /* Arc preloader: four greetings, each held long enough to read. Times are in milliseconds. */
@@ -23,7 +23,7 @@ export const CONTENT: SwarmContent = {
       { text: "नमस्ते", lang: "hi" },
       { text: "வணக்கம்", lang: "ta" },
       { text: "নমস্কার", lang: "bn" },
-      { text: "स्वागत है", lang: "hi" },
+      { text: "സ്വാഗതം", lang: "ml" },
     ],
     hold: 1300,
     reveal: 1800,
@@ -51,42 +51,42 @@ export const CONTENT: SwarmContent = {
   ],
 
   hero: {
-    aria: "Chhaap ’27",
-    kicker: "Festival of collaborative making",
+    aria: "Chhaap ’27 — Made by Many",
+    kicker: "A festival of ideas, ink & interaction",
     headline: ["Made by", "many", "hands."],
     intro:
-      "Two days in Mumbai for designers, engineers, printers and writers who make their best work with other people in the room. Build in public, out loud, and keep every layer visible.",
+      "Great things rarely come from one pair of hands. For two days, Mumbai becomes a meeting ground for designers, engineers, printers and storytellers to exchange ideas, experiment together and make something unexpected. No closed doors. No work in isolation. Just people, possibilities and the freedom to create.",
     nav: [
       { label: "Speakers", href: "#speakers" },
       { label: "Programme", href: "#programme" },
       { label: "Passes", href: "#passes" },
     ],
-    navAria: "Sections",
-    passButton: "Get a pass",
-    ctaPrimary: "Get a festival pass —",
-    ctaSecondary: "See the programme",
+    navAria: "Explore the festival",
+    passButton: "Find your pass",
+    ctaPrimary: "Be part of the making —",
+    ctaSecondary: "Explore the programme",
     ctaSecondaryHref: "#programme",
-    ring: "TWO DAYS · FORTY TALKS · THREE HUNDRED PEOPLE · ONE ROOM ·",
+    ring: "IDEAS IN MOTION · INK ON PAPER · MINDS TOGETHER · MADE IN MUMBAI ·",
     dateArt: ["13—14", "MAY"],
-    colophon: "Printed in two inks",
+    colophon: "Printed through collaboration",
     venue: ["Mill No. 7", "Lower Parel", "Mumbai 400013"],
-    crewAria: "Built by",
+    crewAria: "The people behind the making",
     hint: {
       file: "chhaap-27.riso",
       of: "of",
       here: "here",
-      wait: "Inking two plates…",
-      go: "Scroll — we build it in front of you ↓",
+      wait: "Preparing the press…",
+      go: "Scroll to see what we're making ↓",
     },
   },
 
   idea: {
-    label: "01 — The idea",
-    before: "Most work is made by ",
+    label: "01 — The thinking",
+    before: "The best things are made by ",
     mark: "many hands",
     after:
-      " and credited to one. Chhaap is two days of the opposite: you build in public, beside strangers, and every layer stays visible.",
-    inksAria: "The festival inks",
+      ", not just one. Chhaap brings the process into the open — where ideas overlap, perspectives collide and every contribution leaves its mark.",
+    inksAria: "Five inks. Endless possibilities.",
     inks: [
       { name: "Fluorescent Pink", code: "RISO 0811", v: "var(--ov-pink)" },
       { name: "Medium Blue", code: "RISO 0402", v: "var(--ov-blue)" },
@@ -97,8 +97,8 @@ export const CONTENT: SwarmContent = {
   },
 
   speakers: {
-    label: "02 — Speakers",
-    title: "People who never work alone",
+    label: "02 — The people",
+    title: "Different minds. Shared imagination.",
     items: [
       { name: "Priya Nair", role: "Type designer", city: "Mumbai", talk: "Devanagari, drawn by many", ink: "pink" },
       { name: "Arjun Mehta", role: "Engineer", city: "Pune", talk: "Pairing with a printer", ink: "blue" },
@@ -110,10 +110,10 @@ export const CONTENT: SwarmContent = {
   },
 
   programme: {
-    label: "03 — Programme",
-    title: "Two days, one long table",
-    note: "Day one below. Day two is workshops, open studios and the long party, with the timetable printed on the night.",
-    listAria: "Day one, 13 May",
+    label: "03 — The programme",
+    title: "Two days. Countless ways to make.",
+    note: "Day one brings the conversations, ideas and creative collisions. Day two opens the doors to workshops, open studios and an after-hours gathering. The final timetable? We'll print it together.",
+    listAria: "Day one — 13 May 2027",
     sessions: [
       { time: "09:30", title: "Doors, chai, name badges", room: "Foyer" },
       { time: "10:00", title: "Opening: made by many hands", who: "Neha Banerjee", room: "Main hall" },
@@ -125,37 +125,37 @@ export const CONTENT: SwarmContent = {
     ],
     /* Typed by two crew members while they swap the lunch and the editing session. */
     comment: {
-      first: "Lunch before Kavya? People will be starving.",
-      reply: "Swapping them now ✓",
+      first: "Lunch before Kavya? We're going to need more than ideas to survive.",
+      reply: "Already on it. Moving things around ✓",
     },
   },
 
   passes: {
-    label: "04 — Passes",
-    title: "Pick a pass, bring a friend",
+    label: "04 — Get involved",
+    title: "Find your way into the making.",
     items: [
       {
         name: "Day pass",
         price: "₹4,999",
-        note: "Thursday or Friday",
-        perks: ["All talks that day", "Thali lunch at the long table", "A print from the jam"],
-        cta: "Book day pass",
+        note: "One day. A whole lot of ideas.",
+        perks: ["Access to every talk that day", "A seat at the community thali lunch", "A limited-edition print from the jam"],
+        cta: "Get a day pass",
       },
       {
         name: "Festival",
         price: "₹8,999",
-        note: "Both days, the whole thing",
-        perks: ["Every talk and workshop", "Both lunches, the party", "Your name in the credits"],
-        cta: "Book festival",
+        note: "Two days. The complete experience.",
+        perks: ["Access to every talk and workshop", "Lunch on both days and the after-hours party", "Your name in the festival credits"],
+        cta: "Get the festival pass",
         featured: true,
-        stamp: "Early bird −15% until 31 Jan",
+        stamp: "EARLY BIRD — 15% OFF · UNTIL 31 JAN",
       },
       {
         name: "Studio of five",
         price: "₹34,999",
-        note: "Five festival passes",
-        perks: ["One invoice, five badges", "A reserved table", "A studio poster, printed live"],
-        cta: "Book studio of five",
+        note: "Five minds. One shared table.",
+        perks: ["Five festival passes under one booking", "A reserved collaborative workspace", "An exclusive studio poster, printed live"],
+        cta: "Bring your studio",
       },
     ],
     menus: {
@@ -166,15 +166,47 @@ export const CONTENT: SwarmContent = {
     pasteKey: "⌘ V",
   },
 
+  faq: {
+    label: "05 — Questions",
+    title: "Frequently asked questions",
+    intro: "Short answers to the questions we hear most. Still curious? Write to us and we will reply.",
+    listAria: "Frequently asked questions",
+    items: [
+      {
+        question: "What is Chhaap ’27?",
+        answer: "Chhaap ’27 is a two-day festival celebrating creativity, design, technology, print and culture. It brings designers, developers, artists and curious minds together to exchange ideas, experiment and create something unexpected.",
+      },
+      {
+        question: "When and where is the festival happening?",
+        answer: "Chhaap ’27 is planned for 13–14 May 2027 at Mill No. 7, Lower Parel, Mumbai. Venue and event details are subject to confirmation.",
+      },
+      {
+        question: "Who can attend Chhaap ’27?",
+        answer: "Anyone with a curiosity for creativity is welcome. Whether you're a designer, developer, artist, student or simply someone who loves exploring new ideas, there's a place for you.",
+      },
+      {
+        question: "Do I need a creative or technical background?",
+        answer: "Not at all. Chhaap is for people from all backgrounds. You don't need professional experience or a specific skill set. Just bring your curiosity and willingness to explore.",
+      },
+      {
+        question: "What does my festival pass include?",
+        answer: "The festival pass is designed to provide access across both days, including scheduled talks, shared experiences and general festival spaces. Some limited-capacity workshops may require separate registration.",
+      },
+      {
+        question: "Can I join as a speaker or collaborator?",
+        answer: "Absolutely. Chhaap welcomes fresh perspectives, interesting projects and creative experiments. Watch for official announcements about speaker, workshop and collaboration opportunities.",
+      },
+    ],
+  },
   finale: {
     line1: "SEE YOU",
     line2: "IN MUMBAI.",
     srLine: "See you in Mumbai.",
-    where: "Where",
-    when: "When",
-    doors: "Doors 09:30",
-    write: "Write",
-    credits: "This page was built by",
-    fine: "Chhaap ’27 is a fictional festival. Two inks, many hands, no sponsors on the poster.",
+    where: "Find us",
+    when: "Save the dates",
+    doors: "Doors open 09:30",
+    write: "Say hello",
+    credits: "Made possible by",
+    fine: "Chhaap ’27 is a fictional festival concept. Five inks, countless ideas and many hands behind every impression. No sponsors. Just imagination.",
   },
 }

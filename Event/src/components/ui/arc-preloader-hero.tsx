@@ -159,7 +159,7 @@ export function ArcRevealHero({
 
   return (
     <section
-      aria-label="Hero"
+      aria-label="Chhaap festival introduction"
       className={cn(
         "relative isolate min-h-screen w-full overflow-hidden bg-background text-foreground",
         className,
