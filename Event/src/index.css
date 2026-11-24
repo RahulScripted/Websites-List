@@ -11,11 +11,11 @@
 
 /* Paper and ink, the same two colours the page itself uses, so the curtain blends into it. */
 :root {
-  --background: #f3eee3;
-  --foreground: #16151a;
-  --muted: #e8e2d4;
-  --muted-foreground: #57534b;
-  --border: rgba(22, 21, 26, 0.16);
+  --background: #F8ECD4;
+  --foreground: #1F1230;
+  --muted: #EEDDBE;
+  --muted-foreground: #5C4A66;
+  --border: rgba(31,18,48, 0.16);
 }
 
 *,

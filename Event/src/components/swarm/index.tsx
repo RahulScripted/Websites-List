@@ -25,7 +25,6 @@ interface SwarmProps {
 }
 
 /**
- * Overprint: a two-ink riso festival page that builds itself while you scroll.
  * Named collaborator cursors type the copy, drag cards, draw rules, flood inks and stamp passes.
  * Every move sits on a GSAP timeline scrubbed by ScrollTrigger, so scrolling up takes the page apart again.
  * Before JS runs (and with reduced motion) this is simply the finished page.

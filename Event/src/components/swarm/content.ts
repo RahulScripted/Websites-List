@@ -40,14 +40,14 @@ export const CONTENT: SwarmContent = {
   },
 
   crew: [
-    { name: "Aarav", color: "#F2308F" },
-    { name: "Ananya", color: "#1D63E0" },
-    { name: "Rohan", color: "#F2611A" },
-    { name: "Meera", color: "#00968C" },
-    { name: "Kabir", color: "#7650F5" },
-    { name: "Saanvi", color: "#F0B800", ink: "#17161B" },
-    { name: "Ishaan", color: "#1F9A45" },
-    { name: "Diya", color: "#DC2E25" },
+    { name: "Aarav", color: "#D81B60" },
+    { name: "Ananya", color: "#3F2B96" },
+    { name: "Rohan", color: "#FF7A1A" },
+    { name: "Meera", color: "#00796B" },
+    { name: "Kabir", color: "#7B2CBF" },
+    { name: "Saanvi", color: "#FFC21A", ink: "#1F1230" },
+    { name: "Ishaan", color: "#2E8B3D" },
+    { name: "Diya", color: "#C62828" },
   ],
 
   hero: {

@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* shadcn tokens, mapped to the Kinara & Lehar palette so ui/* components match the page. */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #fbf1df;
+  --foreground: #24143a;
+  --muted: #f6e3c3;
+  --muted-foreground: #5c5470;
+  --primary: #b0185f;
+  --primary-foreground: #fff6e5;
+  --secondary: #f6e3c3;
+  --secondary-foreground: #24143a;
+  --destructive: #d63a1f;
+  --destructive-foreground: #fff6e5;
+  --ring: #b0185f;
+}
+
+@layer base {
+  :where(a[href], button, [role="button"], summary, label[for], select) {
+    cursor: pointer;
+  }
+  :where(button:disabled, select:disabled, input:disabled, textarea:disabled, [aria-disabled="true"]) {
+    cursor: not-allowed;
+  }
+}
+
+body {
+  margin: 0;
+}

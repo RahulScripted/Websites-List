@@ -1,0 +1,71 @@
+
+html { background: #fbf1df; scrollbar-color: #b0185f #fbf1df; }
+.kl {
+  --cream: #fff6e5;
+  --linen: #f6e3c3;
+  --sand: #e6c996;
+  --sea: #b0185f;
+  --sea-soft: #eba3c3;
+  --water: #0b7a85;
+  --water-soft: #8fd0d1;
+  --ink: #24143a;
+  --ink-soft: #5c5470;
+  --sun: #f59a1a;
+  --coral: #d63a1f;
+  --night: #2b0f33;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Figtree', ui-sans-serif, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.kl .font-display { font-family: 'Young Serif', ui-serif, Georgia, serif; font-weight: 400; }
+.kl .font-deva { font-family: 'Noto Sans Devanagari', sans-serif; }
+.kl .font-hand { font-family: 'Caveat', cursive; }
+.kl .font-mono { font-family: 'DM Mono', ui-monospace, monospace; }
+.kl ::selection { background: #f59a1a; color: #24143a; }
+.kl :focus-visible { outline: 2px solid #b0185f; outline-offset: 3px; border-radius: 4px; }
+
+.kl-link {
+  background: linear-gradient(currentColor, currentColor) right bottom / 0 1.5px no-repeat;
+  transition: background-size .55s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: 2px;
+}
+.kl-link:hover, .kl-link:focus-visible { background-size: 100% 1.5px; background-position-x: left; }
+
+.kl-stamp {
+  background: #fffaf2;
+  /* Holes only in the padding ring: the second layer keeps the stamp face solid. */
+  -webkit-mask: radial-gradient(circle at 4px 4px, transparent 2.6px, #000 3px) -4px -4px / 8px 8px, linear-gradient(#000 0 0) content-box;
+          mask: radial-gradient(circle at 4px 4px, transparent 2.6px, #000 3px) -4px -4px / 8px 8px, linear-gradient(#000 0 0) content-box;
+}
+.kl-paper {
+  background-color: #fffaf0;
+  background-image: radial-gradient(rgba(36,20,58,.05) 1px, transparent 1px);
+  background-size: 5px 5px;
+}
+
+.kl-spin { animation: kl-spin 40s linear infinite; }
+@keyframes kl-spin { to { transform: rotate(360deg); } }
+
+.kl-drift { animation: kl-drift var(--dur, 9s) linear infinite; }
+@keyframes kl-drift { to { transform: translateX(-50%); } }
+
+.kl-twinkle { animation: kl-twinkle var(--dur, 3s) ease-in-out var(--delay, 0s) infinite; }
+@keyframes kl-twinkle { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .kl *, .kl *::before, .kl *::after { animation: none !important; transition-duration: 0.01ms !important; }
+}
+/* Lenis owns smooth scrolling; native smooth scroll would fight it. */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+
+/* From Uiverse.io by 0xnihilism - https://uiverse.io/0xnihilism/nasty-husky-13 (MIT). The original `glitch` jitter. */
+@keyframes kl-glitch {
+  0% { transform: translate(2px, 2px); }
+  25% { transform: translate(-2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, -2px); }
+  100% { transform: translate(2px, 2px); }
+}
+.kl-glitch { animation: kl-glitch 0.3s infinite; }
