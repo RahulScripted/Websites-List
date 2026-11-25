@@ -5,6 +5,7 @@ import { Nav } from "@/components/quillo/sections/Nav";
 import { Hero } from "@/components/quillo/sections/Hero";
 import { About } from "@/components/quillo/sections/About";
 import { Work } from "@/components/quillo/sections/Work";
+import { Challenges } from "@/components/quillo/sections/Challenges";
 import { Footer } from "@/components/quillo/sections/Footer";
 
 /**
@@ -22,6 +23,7 @@ export default function Quillo() {
         <Hero />
         <About />
         <Work />
+        <Challenges />
       </main>
       <Footer />
     </>
