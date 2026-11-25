@@ -1,0 +1,132 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --font-display: "Plus Jakarta Sans";
+  --font-mono: "JetBrains Mono";
+  --bg: #f3f4fb;
+  --paper: #ffffff;
+  --ink: #10153a;
+  --ink-2: #2a3063;
+  --muted: #565c80;
+  --line: rgba(16, 21, 58, 0.14);
+  --line-strong: rgba(16, 21, 58, 0.28);
+  --night: #0c1030;
+  --night-2: #161b4a;
+  --yellow: #cdf25b;
+  --pink: #ffb8cf;
+  --mint: #9de9d4;
+  --blue: #bcb0ff;
+  --orange: #ffc58f;
+  --red: #ff5f6d;
+  --violet: #6246ea;
+  --bw: 1px;
+  --sh: 0 12px 28px -14px rgba(16, 21, 58, 0.42);
+  --sh-sm: 0 6px 16px -10px rgba(16, 21, 58, 0.4);
+  --sh-lg: 0 28px 60px -26px rgba(16, 21, 58, 0.5);
+  --r: 20px;
+  --col: 1160px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 90px;
+}
+/* Lenis owns smooth scrolling; native smooth scroll would fight it. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+::selection {
+  background: var(--yellow);
+  color: var(--ink);
+}
+:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.skip {
+  position: fixed;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  background: var(--yellow);
+  border: var(--bw) solid var(--line-strong);
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: top 0.2s;
+}
+.skip:focus {
+  top: 16px;
+}
+h1,
+h2 {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+h2 {
+  font-size: clamp(38px, 5.6vw, 68px);
+}
+h3 {
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
