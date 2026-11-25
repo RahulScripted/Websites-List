@@ -13,7 +13,6 @@ import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { Toran } from "@/components/kinara/parts";
 import { Letters } from "@/components/kinara/sections/Letters";
 import { Footer } from "@/components/kinara/sections/Footer";
-import "@/components/kinara/kinara.css";
 
 /**
  * Kinara & Lehar: a boutique sea-view hotel in Colaba, Mumbai.
