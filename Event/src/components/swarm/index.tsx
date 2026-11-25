@@ -10,6 +10,8 @@ import { Speakers } from "@/components/swarm/sections/Speakers"
 import { Programme } from "@/components/swarm/sections/Programme"
 import { Passes } from "@/components/swarm/sections/Passes"
 import { Faq } from "@/components/swarm/sections/Faq"
+import { Archive } from "@/components/swarm/sections/Archive"
+import { Contribute } from "@/components/swarm/sections/Contribute"
 import { Finale } from "@/components/swarm/sections/Finale"
 
 if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger)
@@ -81,6 +83,8 @@ export default function Swarm({ content, start = true, height = "100svh", classN
       <Speakers c={content} />
       <Programme c={content} />
       <Passes c={content} />
+      <Contribute c={content} />
+      <Archive c={content} />
       <Faq c={content} />
       <Finale c={content} />
     </div>

@@ -17,9 +17,10 @@ export const CONTENT: SwarmContent = {
       "Two days of ideas, design, print and collective creativity. Chhaap ’27 brings designers, makers, engineers and storytellers together in Mumbai, 13–14 May 2027.",
   },
 
-  /* Arc preloader: four greetings, each held long enough to read. Times are in milliseconds. */
+  /* Arc preloader: five greetings, Marathi first because the festival is in Mumbai, each held long enough to read. Times are in milliseconds. */
   preloader: {
     greetings: [
+      { text: "नमस्कार", lang: "mr" },
       { text: "नमस्ते", lang: "hi" },
       { text: "வணக்கம்", lang: "ta" },
       { text: "নমস্কার", lang: "bn" },
@@ -68,8 +69,6 @@ export const CONTENT: SwarmContent = {
     ctaSecondaryHref: "#programme",
     ring: "IDEAS IN MOTION · INK ON PAPER · MINDS TOGETHER · MADE IN MUMBAI ·",
     dateArt: ["13—14", "MAY"],
-    colophon: "Printed through collaboration",
-    venue: ["Mill No. 7", "Lower Parel", "Mumbai 400013"],
     crewAria: "The people behind the making",
     hint: {
       file: "chhaap-27.riso",
@@ -166,8 +165,95 @@ export const CONTENT: SwarmContent = {
     pasteKey: "⌘ V",
   },
 
+  contribute: {
+    label: "05 — Bring something to the table",
+    title: "Bring something to the table.",
+    note: "Chhaap is made by whoever shows up with something to share. Lead a workshop, give a talk, pin your work on the long wall or give a few hours to the crew. Everyone who adds something gets a seat at the table.",
+    cta: { label: "Send a proposal", href: "mailto:hello@chhaap.in" },
+    features: [
+      {
+        id: "workshop",
+        meta: "Day 2 · 14 May · 90 min",
+        size: "lg",
+        title: "Run a workshop",
+        description: "Day two is for making. Lead a 90-minute session at a bench in Mill No. 7: printing, type, binding or something we haven't thought of yet.",
+        visual: { type: "color", color: "#D81B60", tag: "Workshops · Day 2" },
+      },
+      {
+        id: "talk",
+        meta: "Day 1 · 13 May · 20 min",
+        size: "sm",
+        title: "Give a talk",
+        description: "Twenty minutes on the main stage. Proposals close 15 January.",
+        visual: { type: "color", color: "#3F2B96", tag: "Talks · Day 1" },
+      },
+      {
+        id: "wall",
+        meta: "Both days · Courtyard",
+        size: "sm",
+        title: "Show your work",
+        description: "Pin a poster, zine or print on the long wall in the courtyard. Open to every pass holder.",
+        visual: { type: "color", color: "#FFC21A", tag: "The long wall" },
+      },
+      {
+        id: "crew",
+        meta: "Both days · 4-hour shifts",
+        size: "sm",
+        title: "Join the crew",
+        description: "Give four hours on either day and your festival pass is on us. 40 spots open.",
+        visual: { type: "color", color: "#00796B", tag: "Crew · 40 spots" },
+      },
+      {
+        id: "walk",
+        meta: "Day 1 · 13 May · 07:30",
+        size: "sm",
+        title: "Lead a print walk",
+        description: "Take a small group through the presses and sign painters of Lower Parel before the doors open.",
+        visual: { type: "color", color: "#C62828", tag: "Walks · Day 1" },
+      },
+      {
+        id: "studio",
+        meta: "Day 2 · 14 May · Afternoon",
+        size: "md",
+        title: "Host an open studio",
+        description: "Open your table for an afternoon. People drop in, pick up a brush or a squeegee and make something beside you.",
+        visual: { type: "color", color: "#FF7A1A", tag: "Open studios · Day 2" },
+      },
+      {
+        id: "blind",
+        meta: "Proposals close 15 Jan 2027",
+        size: "md",
+        title: "Every proposal read blind",
+        description: "Names and studios stay hidden while the crew reads, so the idea is judged on its own. You hear back within a week.",
+        visual: { type: "color", color: "#7B2CBF", tag: "Reply in 7 days" },
+      },
+    ],
+  },
+  archive: {
+    label: "06 — The festival archive",
+    title: "The festival archive.",
+    note: "Three editions, printed by everyone who came. Every poster, zine and misprint from Chhaap ’24, ’25 and ’26 is kept in the archive: pulled off the drying racks, numbered and catalogued, so this year starts on top of everything we have made together.",
+    reelAria: "Pieces from past editions",
+    tiles: [
+      { year: "’26", tag: "Group build", title: "One poster, 300 people", ink: "pink" },
+      { year: "’25", tag: "Workshop", title: "Devanagari, drawn by many", ink: "blue" },
+      { year: "’24", tag: "Riso jam", title: "The first misprint", ink: "yellow" },
+      { year: "’26", tag: "Open studio", title: "Zines from the long table", ink: "teal" },
+      { year: "’25", tag: "Print walk", title: "Sign painters of Lower Parel", ink: "orange" },
+      { year: "’24", tag: "Talk", title: "Forty cursors, one canvas", ink: "blue" },
+      { year: "’26", tag: "The long wall", title: "1,200 pins, one courtyard", ink: "yellow" },
+      { year: "’25", tag: "After hours", title: "Ink on the dance floor", ink: "pink" },
+    ],
+    stats: [
+      { value: "3", label: "Editions so far" },
+      { value: "2,400", label: "Makers through the doors" },
+      { value: "11,000", label: "Prints pulled" },
+      { value: "186", label: "Workshops run" },
+    ],
+    cta: { label: "Ask for an archive print", href: "mailto:hello@chhaap.in" },
+  },
   faq: {
-    label: "05 — Questions",
+    label: "07 — Questions",
     title: "Frequently asked questions",
     intro: "Short answers to the questions we hear most. Still curious? Write to us and we will reply.",
     listAria: "Frequently asked questions",

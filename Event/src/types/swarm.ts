@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react"
+import type { BentoFeature } from "@/components/ui/marketing-feature-bento"
 
 /** React style object that also accepts CSS custom properties, e.g. `{ "--c": "#f00" }`. */
 export type CSSVars = CSSProperties & Record<`--${string}`, string | number>
@@ -78,8 +79,6 @@ export interface SwarmContent {
     ctaSecondaryHref: string
     ring: string
     dateArt: [string, string]
-    colophon: string
-    venue: string[]
     crewAria: string
     hint: { file: string; of: string; here: string; wait: string; go: string }
   }
@@ -107,6 +106,19 @@ export interface SwarmContent {
     /** Fake right-click menus the crew uses while building the cards. */
     menus: { copy: string[]; paste: string[]; stamp: string[] }
     pasteKey: string
+  }
+  /** "Bring something to the table": ways to take part, shown as a bento grid. */
+  contribute: { label: string; title: string; note: string; cta: NavItem; features: BentoFeature[] }
+  /** "The festival archive": a curved reel of past work, then a few numbers from past editions. */
+  archive: {
+    label: string
+    title: string
+    note: string
+    reelAria: string
+    /** One tile per piece. `ink` picks the tile colour; `year` is drawn large, `tag` small. */
+    tiles: { year: string; tag: string; title: string; ink: SpeakerInk }[]
+    stats: { value: string; label: string }[]
+    cta: NavItem
   }
   faq: { label: string; title: string; intro: string; listAria: string; items: FaqItem[] }
   finale: {

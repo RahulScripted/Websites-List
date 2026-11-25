@@ -17,7 +17,6 @@ export function Finale({ c }: { c: SwarmContent }) {
         <span aria-hidden="true" className="ov-fin-l2">{letters(finale.line2)}</span>
       </h2>
       <div className="ov-foot">
-        <div data-calm data-k="foot"><span className="ov-label">{finale.where}</span>{hero.venue.map((v) => <span key={v}>{v}</span>)}</div>
         <div data-calm data-k="foot"><span className="ov-label">{finale.when}</span><span>{meta.dates}</span><span>{finale.doors}</span></div>
         <div data-calm data-k="foot"><span className="ov-label">{finale.write}</span><a href={"mailto:" + meta.email}>{meta.email}</a></div>
         <div data-calm className="ov-credits"><span className="ov-label" data-k="foot">{finale.credits}</span>

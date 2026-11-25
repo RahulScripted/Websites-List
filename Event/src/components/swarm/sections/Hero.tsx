@@ -48,17 +48,15 @@ export function Hero({ c }: { c: SwarmContent }) {
                 <text><textPath href="#ov-ring-path" textLength="568">{hero.ring}</textPath></text>
               </svg>
             </span>
-            <span className="ov-art-date" data-k="date"><b>{hero.dateArt[0]}</b><b>{hero.dateArt[1]}</b></span>
+            <span className="ov-art-date !-ml-1" data-k="date"><b>{hero.dateArt[0]}</b><b>{hero.dateArt[1]}</b></span>
           </div>
         </div>
 
         <footer className="ov-colo" data-calm>
           <span className="ov-colo-inks">
-            <span data-k="colo"><Ty>{hero.colophon}</Ty></span>
             <i className="ov-chip" style={{ "--i": "var(--ov-pink)" } as CSSVars} data-k="chip-p" />
             <i className="ov-chip" style={{ "--i": "var(--ov-blue)" } as CSSVars} data-k="chip-b" />
           </span>
-          <span data-k="colo"><Ty>{hero.venue.join(" · ")}</Ty></span>
           <span className="ov-colo-crew" data-k="crew" aria-label={hero.crewAria + " " + crew.map((m) => m.name).join(", ")}>
             {crew.map((m) => <i key={m.name} style={{ "--c": m.color, "--ct": m.ink ?? "#fff" } as CSSVars} aria-hidden="true">{m.name[0]}</i>)}
           </span>
