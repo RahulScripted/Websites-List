@@ -1,211 +1,204 @@
-import type { CSSProperties } from "react";
 
-/** Shared SVG sprite: the isometric house, thermostat, drop, charger, leaf, shield, wrench, purifier, orb, spark and logo,
- *  plus every filter, pattern and gradient they use. Mounted once; plates reference it with <use href="#hy-s-…" />. */
 export function Sprite() {
   return (
     <svg id="hy-defs" width="0" height="0" style={{ position: "absolute" }} aria-hidden="true" focusable="false">
       <defs>
-      <filter id="hy-f-b2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2" /></filter>
-      <filter id="hy-f-b4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" /></filter>
-      <filter id="hy-f-b8" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" /></filter>
-      <filter id="hy-f-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-      <filter id="hy-f-brush" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.2 .015" numOctaves="2" seed="4" /><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .9 0 0 0 -.35" /><feComposite in2="SourceGraphic" operator="in" /></filter>
-      <pattern id="hy-p-grille" width="3.4" height="3.4" patternUnits="userSpaceOnUse"><circle cx="1.7" cy="1.7" r=".75" fill="#000" opacity=".75" /></pattern>
-      <pattern id="hy-p-mesh" width="2.4" height="2.4" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r=".55" fill="#000" opacity=".2" /></pattern>
-      <linearGradient id="hy-g-metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#fdfdfc" /><stop offset=".22" stopColor="#c4c6c5" /><stop offset=".42" stopColor="#f6f6f4" /><stop offset=".58" stopColor="#8c8e8d" /><stop offset=".78" stopColor="#e3e4e2" /><stop offset="1" stopColor="#a2a4a3" /></linearGradient>
-      <radialGradient id="hy-g-glass" cx=".42" cy=".32" r=".8"><stop offset="0" stopColor="#2c3034" /><stop offset=".6" stopColor="#0e1012" /><stop offset="1" stopColor="#040405" /></radialGradient>
-      <linearGradient id="hy-g-arc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#ffc56b" /><stop offset="1" stopColor="#ff5a1f" /></linearGradient>
-      <linearGradient id="hy-g-refl" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stopColor="#fff" stopOpacity=".22" /><stop offset="1" stopColor="#fff" stopOpacity="0" /></linearGradient>
-      <mask id="hy-m-arc"><circle cx="100" cy="100" r="54" fill="none" stroke="#fff" strokeWidth="12" strokeDasharray="130 400" transform="rotate(135 100 100)" /></mask>
-      <radialGradient id="hy-g-water" cx=".56" cy=".72" r=".75"><stop offset="0" stopColor="#f5fcff" /><stop offset=".22" stopColor="#a7dbf5" /><stop offset=".55" stopColor="#3f96cc" /><stop offset=".85" stopColor="#14507f" /><stop offset="1" stopColor="#0a2c4b" /></radialGradient>
-      <clipPath id="hy-cp-drop"><path d="M100 24C118 56 144 86 144 120a44 44 0 0 1-88 0C56 86 82 56 100 24z" /></clipPath>
-      <linearGradient id="hy-g-wall-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fbf7ef" /><stop offset="1" stopColor="#d8cfbf" /></linearGradient>
-      <linearGradient id="hy-g-wall-r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#a7a094" /><stop offset="1" stopColor="#77716a" /></linearGradient>
-      <linearGradient id="hy-g-roof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#4a4d50" /><stop offset="1" stopColor="#1f2022" /></linearGradient>
-      <linearGradient id="hy-g-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff1c9" /><stop offset=".55" stopColor="#ffc56b" /><stop offset="1" stopColor="#e98a2c" /></linearGradient>
-      <linearGradient id="hy-g-glassw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#3d5f7a" /><stop offset=".6" stopColor="#132535" /><stop offset="1" stopColor="#2a3d4c" /></linearGradient>
-      <linearGradient id="hy-g-grass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#a9cf86" /><stop offset="1" stopColor="#4f7d3f" /></linearGradient>
-      <radialGradient id="hy-g-tree" cx=".35" cy=".3" r=".8"><stop offset="0" stopColor="#b3d98a" /><stop offset=".55" stopColor="#4f7e3a" /><stop offset="1" stopColor="#253f1c" /></radialGradient>
-      <linearGradient id="hy-g-solar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#2d4f72" /><stop offset="1" stopColor="#0b1726" /></linearGradient>
-      <linearGradient id="hy-g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#ffffff" /><stop offset=".5" stopColor="#f1eee8" /><stop offset="1" stopColor="#cdc7bd" /></linearGradient>
-      <linearGradient id="hy-g-panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#22262a" /><stop offset="1" stopColor="#060708" /></linearGradient>
-      <linearGradient id="hy-g-darkalu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#6b7076" /><stop offset=".18" stopColor="#3a3e43" /><stop offset=".6" stopColor="#24272b" /><stop offset="1" stopColor="#141618" /></linearGradient>
-      <radialGradient id="hy-g-lens" cx=".4" cy=".35" r=".7"><stop offset="0" stopColor="#3b5d8c" /><stop offset=".45" stopColor="#101b2e" /><stop offset="1" stopColor="#000" /></radialGradient>
-      <linearGradient id="hy-g-chrome" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#ffffff" /><stop offset=".18" stopColor="#b3b9bf" /><stop offset=".34" stopColor="#f4f6f8" /><stop offset=".48" stopColor="#555c66" /><stop offset=".6" stopColor="#dfe3e7" /><stop offset=".8" stopColor="#868d96" /><stop offset="1" stopColor="#eef1f4" /></linearGradient>
-      <linearGradient id="hy-g-leaf" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stopColor="#244d22" /><stop offset=".45" stopColor="#4f8c3a" /><stop offset="1" stopColor="#a6d46e" /></linearGradient>
-      <radialGradient id="hy-g-dew" cx=".4" cy=".65" r=".7"><stop offset="0" stopColor="#efffe0" /><stop offset=".6" stopColor="#8cc466" /><stop offset="1" stopColor="#1d4a1a" /></radialGradient>
-      <linearGradient id="hy-g-cyl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#bdb7ad" /><stop offset=".3" stopColor="#f3f0ea" /><stop offset=".48" stopColor="#ffffff" /><stop offset=".82" stopColor="#d6d0c6" /><stop offset="1" stopColor="#a39d93" /></linearGradient>
-      <radialGradient id="hy-g-cap" cx=".4" cy=".3" r=".8"><stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#dcd7cf" /></radialGradient>
-      <radialGradient id="hy-g-orb" cx=".5" cy=".5" fx=".36" fy=".3" r=".55"><stop offset="0" stopColor="#fffaf0" /><stop offset=".16" stopColor="#ffe2a6" /><stop offset=".4" stopColor="#ffb25c" /><stop offset=".68" stopColor="#ee6630" /><stop offset=".9" stopColor="#8a2412" /><stop offset="1" stopColor="#3a0d06" /></radialGradient>
-      <linearGradient id="hy-g-irid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#8fdcff" /><stop offset=".5" stopColor="#d39bff" /><stop offset="1" stopColor="#ffb25c" /></linearGradient>
-      <radialGradient id="hy-g-spec" cx=".5" cy=".5" r=".5"><stop offset="0" stopColor="#fff" /><stop offset="1" stopColor="#fff" stopOpacity="0" /></radialGradient>
+<>
+{/* HOUSE — architectural, warm and more dimensional */}
+<symbol id="hy-s-house" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="178" rx="66" ry="9" fill="#172018" opacity=".2" filter="url(#hy-f-b8)" />
+  <path d="M34 139 100 173 166 139 100 106Z" fill="#7d9b65" />
+  <path d="M34 139 100 173V181L34 148Z" fill="#d5cdbd" />
+  <path d="M100 173 166 139V148L100 181Z" fill="#8b8377" />
+  <path d="M51 88 100 62 149 88V137L100 162 51 137Z" fill="#c9bda9" />
+  <path d="M51 88 100 112V162L51 137Z" fill="url(#hy-g-wall-l)" />
+  <path d="M100 112 149 88V137L100 162Z" fill="url(#hy-g-wall-r)" />
+  <path d="M44 87 100 56 156 87 100 117Z" fill="#262a2c" />
+  <path d="M44 87 100 117 100 126 44 96Z" fill="#171a1b" />
+  <path d="M100 117 156 87V96L100 126Z" fill="#35383a" />
+  <path d="M52 85 100 59 148 85 100 111Z" fill="url(#hy-g-roof)" />
+  <path d="M104 68 135 85 116 95 85 78Z" fill="url(#hy-g-solar)" />
+  <path d="M101 70 132 87M116 76 97 86" stroke="#9fc4e8" strokeOpacity=".5" strokeWidth="1" />
+  <path d="M61 101 89 115V143L61 129Z" fill="#2c4657" />
+  <path d="M65 105 85 115V138L65 128Z" fill="url(#hy-g-warm)" />
+  <path d="M75 110V133M65 117 85 127" stroke="#fff2d6" strokeOpacity=".65" strokeWidth="1.2" />
+  <path d="M111 119 139 105V133L111 147Z" fill="#193044" />
+  <path d="M115 121 135 111V130L115 140Z" fill="url(#hy-g-glassw)" />
+  <path d="M120 118 130 113" stroke="#fff" strokeOpacity=".35" strokeWidth="1.5" />
+  <path d="M100 56 100 45" stroke="#393b3a" strokeWidth="4" strokeLinecap="round" />
+  <circle cx="100" cy="43" r="3" fill="#ffc56b" filter="url(#hy-f-glow)" />
+  <path d="M45 145 56 151V134" stroke="#70543b" strokeWidth="3" fill="none" />
+  <circle cx="46" cy="125" r="12" fill="url(#hy-g-tree)" />
+  <circle cx="56" cy="132" r="8" fill="url(#hy-g-tree)" />
+  <circle cx="42" cy="120" r="4" fill="#d2e7ae" opacity=".45" />
+  <circle cx="155" cy="145" r="7" fill="url(#hy-g-tree)" />
+  <path d="M119 153 143 141" stroke="#d9d1c2" strokeWidth="2" opacity=".6" />
+</symbol>
+ </>
 
-      <symbol id="hy-s-house" viewBox="0 0 200 200">
-        <ellipse cx="100" cy="188" rx="80" ry="10" fill="#000" opacity=".35" filter="url(#hy-f-b8)" />
-        <path d="M30 145 100 180v12L30 157z" fill="#d3ccc0" />
-        <path d="M100 180 170 145v12l-70 35z" fill="#958e83" />
-        <path d="M100 110 170 145 100 180 30 145z" fill="url(#hy-g-grass)" />
-        <path d="M30 145 100 180 170 145" fill="none" stroke="#fff" strokeOpacity=".35" strokeWidth=".8" />
-        <path d="M120 141 128 137 160 153 152 157z" fill="#ece6da" />
-        <ellipse cx="76" cy="146" rx="28" ry="9" fill="#ffc46b" opacity=".6" filter="url(#hy-f-b4)" />
-        <path d="M56 128 100 150V100L56 78z" fill="url(#hy-g-wall-l)" />
-        <path d="M100 150 144 128V78l-44 22z" fill="url(#hy-g-wall-r)" />
-        <path d="M56 84 100 106V100L56 78z" fill="#000" opacity=".12" />
-        <path d="M100 106 144 84v-6l-44 22z" fill="#000" opacity=".2" />
-        <path d="M64 126 92 140V110L64 96z" fill="#ffb347" opacity=".7" filter="url(#hy-f-b4)" />
-        <path d="M64 126 92 140V110L64 96z" fill="url(#hy-g-warm)" />
-        <path d="M68 128 75 131.5V122L68 118.5z" fill="#5b3a22" opacity=".5" />
-        <circle cx="71" cy="104" r="1.8" fill="#fff" /><circle cx="85" cy="111" r="1.8" fill="#fff" />
-        <path d="M78 133V103M64 111l28 14" stroke="#3a3328" strokeWidth="1.1" />
-        <path d="M64 96 92 110M64 126 92 140" stroke="#2c2620" strokeWidth="1.8" />
-        <path d="M108 136 138 121V105L108 120z" fill="url(#hy-g-glassw)" />
-        <path d="M112 134 119 130.5V112.5L112 116z" fill="#fff" opacity=".18" />
-        <path d="M123 128.5V112.5" stroke="#0c1620" strokeWidth="1.2" />
-        <path d="M100 56 144 78 100 100 56 78z" fill="url(#hy-g-roof)" />
-        <path d="M56 78 100 100 144 78" fill="none" stroke="#fff" strokeOpacity=".4" strokeWidth=".9" />
-        <path d="M61 78 100 58.5 139 78 100 97.5z" fill="none" stroke="#000" strokeOpacity=".3" strokeWidth="1" />
-        <path d="M104 66 126 77 114 83 92 72z" fill="url(#hy-g-solar)" />
-        <path d="M98 69 120 80M110 71.5 98 77.5" stroke="#9fc4e8" strokeOpacity=".4" strokeWidth=".6" />
-        <path d="M104 66 126 77" stroke="#fff" strokeOpacity=".55" strokeWidth=".6" />
-        <circle cx="78" cy="78" r="2.4" fill="#ffc56b" filter="url(#hy-f-glow)" />
-        <circle className="pulse" cx="78" cy="78" r="3" fill="none" stroke="#ffc56b" strokeWidth="1" />
-        <ellipse cx="48" cy="150" rx="12" ry="4" fill="#000" opacity=".3" filter="url(#hy-f-b2)" />
-        <rect x="44.5" y="132" width="3" height="18" rx="1" fill="#5a4030" />
-        <circle cx="46" cy="124" r="14" fill="url(#hy-g-tree)" />
-        <circle cx="55" cy="131" r="8" fill="url(#hy-g-tree)" />
-        <circle cx="41" cy="118" r="5" fill="#fff" opacity=".22" filter="url(#hy-f-b2)" />
-        <circle cx="152" cy="150" r="6" fill="url(#hy-g-tree)" />
-      </symbol>
+{/* THERMOSTAT — cleaner premium smart-home control */}
+<symbol id="hy-s-thermo" viewBox="0 0 200 200">
+  <circle cx="100" cy="105" r="76" fill="#000" opacity=".24" filter="url(#hy-f-b8)" />
+  <circle cx="100" cy="100" r="75" fill="url(#hy-g-metal)" />
+  <circle cx="100" cy="100" r="70" fill="#24282b" />
+  <circle cx="100" cy="100" r="66" fill="url(#hy-g-glass)" />
+  <circle cx="100" cy="100" r="59" fill="none" stroke="#fff" strokeOpacity=".08" strokeWidth="1" />
+  <circle cx="100" cy="100" r="51" fill="none" stroke="#fff" strokeOpacity=".13" strokeWidth="5" strokeDasharray="1 4" />
+  <circle cx="100" cy="100" r="51" fill="none" stroke="url(#hy-g-arc)" strokeWidth="6" strokeLinecap="round" strokeDasharray="112 320" transform="rotate(135 100 100)" />
+  <circle cx="100" cy="49" r="3" fill="#ffc56b" filter="url(#hy-f-glow)" />
+  <path d="M51 84A54 54 0 0 1 131 51" fill="none" stroke="#fff" strokeOpacity=".14" strokeWidth="2" strokeLinecap="round" />
+  <text x="100" y="107" textAnchor="middle" fill="#fff" fontSize="35" fontWeight="300" letterSpacing="-1">24°</text>
+  <text x="100" y="127" textAnchor="middle" fill="#ffb66e" fontSize="7" fontWeight="600" letterSpacing="2">COMFORT</text>
+  <path d="M47 80A66 66 0 0 1 139 49" fill="none" stroke="#fff" strokeOpacity=".12" strokeWidth="8" strokeLinecap="round" />
+  <circle cx="100" cy="100" r="73" fill="none" stroke="#fff" strokeOpacity=".55" strokeWidth="1" />
+</symbol>
 
-      <symbol id="hy-s-thermo" viewBox="0 0 200 200">
-        <circle cx="106" cy="114" r="78" fill="#000" opacity=".38" filter="url(#hy-f-b8)" />
-        <circle cx="100" cy="100" r="80" fill="url(#hy-g-metal)" />
-        <circle cx="100" cy="100" r="80" fill="#fff" filter="url(#hy-f-brush)" opacity=".45" />
-        <circle cx="100" cy="100" r="79.3" fill="none" stroke="#fff" strokeOpacity=".85" strokeWidth="1.2" />
-        <circle cx="100" cy="100" r="67.5" fill="#5f6261" />
-        <circle cx="100" cy="100" r="66" fill="url(#hy-g-glass)" />
-        <circle cx="100" cy="100" r="54" fill="none" stroke="#fff" strokeOpacity=".18" strokeWidth="6" strokeDasharray=".8 2.97" />
-        <circle cx="100" cy="100" r="54" fill="none" stroke="#ff7a2e" strokeWidth="9" strokeDasharray="130 400" transform="rotate(135 100 100)" opacity=".5" filter="url(#hy-f-b4)" />
-        <circle cx="100" cy="100" r="54" fill="none" stroke="url(#hy-g-arc)" strokeWidth="6" strokeDasharray=".8 2.97" mask="url(#hy-m-arc)" />
-        <circle cx="102.8" cy="46.1" r="3.4" fill="#fff" filter="url(#hy-f-glow)" />
-        <text x="100" y="112" textAnchor="middle" fill="#fff" style={{ font: "300 36px 'Instrument Sans',sans-serif", letterSpacing: "-1px" } as CSSProperties}>24°</text>
-        <text x="100" y="130" textAnchor="middle" fill="#ff9a4a" style={{ font: "600 7px 'Instrument Sans',sans-serif", letterSpacing: "2px" } as CSSProperties}>COOLING</text>
-        <path d="M40 90A62 62 0 0 1 152 66C120 52 70 58 40 90z" fill="url(#hy-g-refl)" />
-        <ellipse cx="66" cy="36" rx="28" ry="5" transform="rotate(-30 66 36)" fill="#fff" opacity=".9" filter="url(#hy-f-b2)" />
-      </symbol>
+{/* WATER — glass-like droplet with restrained reflections */}
+<symbol id="hy-s-drop" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="166" rx="43" ry="9" fill="#082a45" opacity=".2" filter="url(#hy-f-b8)" />
+  <path d="M100 25C119 57 143 88 143 119a43 43 0 1 1-86 0c0-31 24-62 43-94Z" fill="url(#hy-g-water)" />
+  <path d="M100 25C119 57 143 88 143 119a43 43 0 1 1-86 0c0-31 24-62 43-94Z" fill="none" stroke="#e8f8ff" strokeOpacity=".55" strokeWidth="1.5" />
+  <path d="M87 54C75 76 65 94 65 113" fill="none" stroke="#fff" strokeWidth="6" strokeLinecap="round" opacity=".6" />
+  <path d="M76 126c3 15 15 26 29 28" fill="none" stroke="#eafaff" strokeOpacity=".5" strokeWidth="2" strokeLinecap="round" />
+  <ellipse cx="119" cy="132" rx="16" ry="8" fill="#fff" opacity=".2" filter="url(#hy-f-b4)" />
+  <circle cx="76" cy="121" r="2.5" fill="#fff" opacity=".8" />
+</symbol>
 
-      <symbol id="hy-s-drop" viewBox="0 0 200 200">
-        <ellipse cx="100" cy="174" rx="86" ry="13" fill="none" stroke="#fff" strokeOpacity=".35" strokeWidth="1" />
-        <ellipse cx="100" cy="174" rx="62" ry="9" fill="none" stroke="#fff" strokeOpacity=".6" strokeWidth="1.3" />
-        <ellipse cx="100" cy="176" rx="46" ry="7" fill="#0a2e4d" opacity=".45" filter="url(#hy-f-b4)" />
-        <ellipse cx="108" cy="172" rx="22" ry="4" fill="#fff" opacity=".6" filter="url(#hy-f-b2)" />
-        <path d="M100 24C118 56 144 86 144 120a44 44 0 0 1-88 0C56 86 82 56 100 24z" fill="url(#hy-g-water)" />
-        <g clipPath="url(#hy-cp-drop)">
-          <path d="M100 24C118 56 144 86 144 120a44 44 0 0 1-88 0C56 86 82 56 100 24z" fill="none" stroke="#04192c" strokeOpacity=".55" strokeWidth="8" filter="url(#hy-f-b4)" />
-          <path d="M54 112c24-10 64-10 92 4" stroke="#072640" strokeOpacity=".4" strokeWidth="4" fill="none" filter="url(#hy-f-b2)" />
-          <ellipse cx="112" cy="144" rx="26" ry="15" fill="#fff" opacity=".75" filter="url(#hy-f-b4)" />
-        </g>
-        <path d="M88 58c-10 16-20 34-21 52 3-16 12-34 24-50z" fill="#fff" opacity=".85" />
-        <circle cx="74" cy="124" r="3.2" fill="#fff" opacity=".9" />
-      </symbol>
+{/* CHARGER — simplified hardware with clearer screen hierarchy */}
+<symbol id="hy-s-bolt" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="170" rx="48" ry="8" fill="#000" opacity=".22" filter="url(#hy-f-b8)" />
+  <path d="M100 157c0 17-12 22-35 29" fill="none" stroke="#25282b" strokeWidth="9" strokeLinecap="round" />
+  <path d="M100 157c0 17-12 22-35 29" fill="none" stroke="#777d81" strokeWidth="2" strokeLinecap="round" />
+  <rect x="57" y="21" width="86" height="141" rx="21" fill="url(#hy-g-plastic)" />
+  <rect x="58" y="22" width="84" height="139" rx="20" fill="none" stroke="#fff" strokeWidth="1.5" />
+  <path d="M69 27H130" stroke="#fff" strokeWidth="2" strokeLinecap="round" opacity=".7" />
+  <rect x="66" y="37" width="68" height="87" rx="12" fill="url(#hy-g-panel)" />
+  <rect x="72" y="43" width="56" height="75" rx="8" fill="#111a20" />
+  <circle cx="100" cy="76" r="22" fill="none" stroke="#45413a" strokeWidth="2.5" />
+  <circle cx="100" cy="76" r="22" fill="none" stroke="#ffb347" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="92 140" transform="rotate(-90 100 76)" />
+  <path d="M104 59 88 81H99L95 97 113 74H102Z" fill="#ffc56b" />
+  <text x="100" y="111" textAnchor="middle" fill="#f6f1e8" fontSize="7" fontWeight="500">7.2 kW</text>
+  <circle cx="100" cy="145" r="3" fill="#b9b2a7" />
+  <path d="M72 40H91L73 112" fill="none" stroke="#fff" strokeOpacity=".08" strokeWidth="5" />
+</symbol>
 
-      <symbol id="hy-s-bolt" viewBox="0 0 200 200">
-        <rect x="64" y="36" width="90" height="140" rx="24" fill="#000" opacity=".35" filter="url(#hy-f-b8)" />
-        <path d="M100 160c0 18-14 26-44 30" stroke="#0d0e10" strokeWidth="10" fill="none" strokeLinecap="round" />
-        <path d="M98 160c0 17-13 24-42 28" stroke="#5a5e63" strokeWidth="2" fill="none" strokeLinecap="round" opacity=".7" />
-        <rect x="55" y="22" width="90" height="142" rx="24" fill="url(#hy-g-plastic)" />
-        <rect x="55.5" y="22.5" width="89" height="141" rx="23.5" fill="none" stroke="#fff" strokeWidth="1" />
-        <rect x="64" y="25" width="72" height="3" rx="1.5" fill="#fff" filter="url(#hy-f-b2)" />
-        <rect x="66" y="34" width="68" height="94" rx="14" fill="url(#hy-g-panel)" />
-        <circle cx="100" cy="78" r="28" fill="none" stroke="#2a2d31" strokeWidth="3" />
-        <circle cx="100" cy="78" r="28" fill="none" stroke="#ffb347" strokeWidth="3" strokeDasharray="120 200" strokeLinecap="round" transform="rotate(-90 100 78)" filter="url(#hy-f-glow)" />
-        <path d="M104 60 88 82h11l-4 17 16-23h-11z" fill="#ffc56b" filter="url(#hy-f-glow)" />
-        <text x="100" y="120" textAnchor="middle" fill="#fff" opacity=".85" style={{ font: "500 8px 'Instrument Sans',sans-serif", letterSpacing: ".5px" } as CSSProperties}>7.2 kW · 68%</text>
-        <path d="M72 34h40L80 128h-8a6 6 0 0 1-6-6V40a6 6 0 0 1 6-6z" fill="#fff" opacity=".06" />
-        <circle cx="100" cy="146" r="3" fill="#bdb6aa" />
-      </symbol>
+{/* LEAF — more natural shape and refined vein detail */}
+<symbol id="hy-s-leaf" viewBox="0 0 200 200">
+  <path d="M47 157 30 174" stroke="#496d35" strokeWidth="5" strokeLinecap="round" />
+  <path d="M47 157C43 89 89 42 161 37c2 70-41 117-114 120Z" fill="url(#hy-g-leaf)" />
+  <path d="M47 157C43 89 89 42 161 37c2 70-41 117-114 120Z" fill="none" stroke="#d9efb2" strokeOpacity=".45" strokeWidth="1.5" />
+  <path d="M47 157C83 119 120 79 158 41" fill="none" stroke="#d8f2a8" strokeWidth="2.2" strokeLinecap="round" opacity=".75" />
+  <g fill="none" stroke="#d8f2a8" strokeWidth="1.2" strokeLinecap="round" opacity=".48">
+    <path d="M65 138Q57 120 58 104M83 119Q74 99 81 82M102 99Q96 80 106 62M121 80Q119 61 133 49" />
+    <path d="M65 138Q84 145 101 144M83 119Q103 124 121 115M102 99Q124 102 141 88M121 80Q140 79 151 65" />
+  </g>
+  <path d="M87 91Q111 60 143 49" stroke="#fff" strokeOpacity=".18" strokeWidth="8" fill="none" filter="url(#hy-f-b4)" />
+  <circle cx="119" cy="97" r="7" fill="url(#hy-g-dew)" />
+  <ellipse cx="116" cy="94" rx="2.5" ry="1.8" fill="#fff" opacity=".8" />
+</symbol>
 
-      <symbol id="hy-s-leaf" viewBox="0 0 200 200">
-        <path d="M58 168C58 96 106 52 172 48c0 74-44 120-114 120z" fill="#000" opacity=".3" filter="url(#hy-f-b8)" />
-        <path d="M48 154 30 174" stroke="#3c6a2c" strokeWidth="4.5" strokeLinecap="round" />
-        <path d="M46 156C46 84 96 40 162 38c0 74-42 118-116 118z" fill="url(#hy-g-leaf)" />
-        <path d="M46 156C46 84 96 40 162 38" fill="none" stroke="#d8f2a8" strokeOpacity=".4" strokeWidth="1.4" />
-        <path d="M48 154C80 118 116 84 156 44" fill="none" stroke="#d6f0a0" strokeWidth="2.4" opacity=".7" />
-        <g fill="none" stroke="#d6f0a0" strokeWidth="1.1" opacity=".38"><path d="M66 135Q58 122 58 106M84 116Q76 100 80 82M102 98Q96 80 104 64M120 80Q116 64 126 50M66 135Q84 142 100 146M84 116Q104 120 122 116M102 98Q122 100 138 92M120 80Q138 80 150 68" /></g>
-        <ellipse cx="110" cy="78" rx="34" ry="12" transform="rotate(-40 110 78)" fill="#fff" opacity=".14" filter="url(#hy-f-b4)" />
-        <ellipse cx="123" cy="104" rx="9" ry="4" fill="#0e2a0c" opacity=".45" filter="url(#hy-f-b2)" />
-        <circle cx="118" cy="96" r="8.5" fill="url(#hy-g-dew)" opacity=".92" />
-        <ellipse cx="120" cy="100" rx="4" ry="2.4" fill="#f4ffe8" opacity=".7" filter="url(#hy-f-b2)" />
-        <circle cx="115" cy="92.5" r="2.2" fill="#fff" />
-      </symbol>
+{/* SECURITY DEVICE — retain existing ID, improve its shield-like identity */}
+<symbol id="hy-s-shield" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="173" rx="36" ry="8" fill="#000" opacity=".2" filter="url(#hy-f-b8)" />
+  <path d="M100 20 151 40V91c0 37-20 64-51 82-31-18-51-45-51-82V40Z" fill="url(#hy-g-darkalu)" />
+  <path d="M100 27 144 44V91c0 31-16 54-44 71-28-17-44-40-44-71V44Z" fill="#17222b" />
+  <path d="M100 27 144 44V91c0 31-16 54-44 71Z" fill="#263b49" opacity=".8" />
+  <path d="M100 27 144 44V91c0 31-16 54-44 71-28-17-44-40-44-71V44Z" fill="none" stroke="#d9e7eb" strokeOpacity=".45" strokeWidth="1.5" />
+  <path d="M100 62c-14 0-24 10-24 23v9h48v-9c0-13-10-23-24-23Z" fill="#0c1117" />
+  <rect x="70" y="88" width="60" height="44" rx="10" fill="#111a21" stroke="#8ba4b3" strokeOpacity=".45" />
+  <path d="M88 109 97 118 115 98" fill="none" stroke="#9fe0ff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" filter="url(#hy-f-glow)" />
+  <circle cx="100" cy="48" r="3" fill="#9fe0ff" filter="url(#hy-f-glow)" />
+</symbol>
 
-      <symbol id="hy-s-shield" viewBox="0 0 200 200">
-        <rect x="78" y="26" width="60" height="164" rx="30" fill="#000" opacity=".38" filter="url(#hy-f-b8)" />
-        <rect x="70" y="16" width="60" height="166" rx="30" fill="url(#hy-g-darkalu)" />
-        <rect x="70" y="16" width="60" height="166" rx="30" fill="#fff" filter="url(#hy-f-brush)" opacity=".14" />
-        <rect x="70.6" y="16.6" width="58.8" height="164.8" rx="29.4" fill="none" stroke="#fff" strokeOpacity=".28" strokeWidth="1.2" />
-        <circle cx="100" cy="52" r="20" fill="#050608" />
-        <circle cx="100" cy="52" r="14" fill="url(#hy-g-lens)" />
-        <circle cx="100" cy="52" r="14" fill="none" stroke="#2a3340" strokeWidth="1" />
-        <circle cx="100" cy="52" r="6" fill="#06101f" />
-        <ellipse cx="94" cy="46" rx="4" ry="2.4" fill="#fff" opacity=".75" transform="rotate(-30 94 46)" />
-        <path d="M108 58a10 10 0 0 1-8 4" stroke="#b28cff" strokeOpacity=".7" strokeWidth="1.5" fill="none" />
-        <circle cx="84" cy="52" r="1.6" fill="#4a1212" /><circle cx="116" cy="52" r="1.6" fill="#4a1212" />
-        <rect x="84" y="90" width="32" height="24" rx="4" fill="url(#hy-p-grille)" />
-        <circle cx="100" cy="148" r="19" fill="#0a0b0d" />
-        <circle cx="100" cy="148" r="15.5" fill="none" stroke="#9fe0ff" strokeWidth="2.5" filter="url(#hy-f-glow)" />
-        <circle cx="100" cy="148" r="12" fill="url(#hy-g-glass)" />
-        <ellipse cx="96" cy="143" rx="5" ry="2.5" fill="#fff" opacity=".25" />
-        <path d="M74 40v100" stroke="#fff" strokeOpacity=".18" strokeWidth="2" strokeLinecap="round" />
-      </symbol>
+{/* WRENCH — clean chrome tool with readable silhouette */}
+<symbol id="hy-s-wrench" viewBox="0 0 200 200">
+  <path d="M140 31a37 37 0 0 0-42 47L41 135a16 16 0 0 0 23 23l57-57a37 37 0 0 0 47-42l-22 21-19-6-6-20Z" fill="#000" opacity=".2" filter="url(#hy-f-b8)" transform="translate(4 7)" />
+  <path d="M140 31a37 37 0 0 0-42 47L41 135a16 16 0 0 0 23 23l57-57a37 37 0 0 0 47-42l-22 21-19-6-6-20Z" fill="url(#hy-g-chrome)" />
+  <path d="M140 31a37 37 0 0 0-42 47L41 135a16 16 0 0 0 23 23l57-57a37 37 0 0 0 47-42l-22 21-19-6-6-20Z" fill="none" stroke="#4d5359" strokeOpacity=".65" strokeWidth="1.2" />
+  <path d="M47 143 102 88" stroke="#fff" strokeWidth="3" strokeLinecap="round" opacity=".8" />
+  <path d="M57 153 112 98" stroke="#555d65" strokeWidth="1.5" strokeLinecap="round" opacity=".6" />
+  <path d="M104 50a31 31 0 0 1 27-16" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
+  <circle cx="52" cy="147" r="5" fill="#30363b" />
+</symbol>
 
-      <symbol id="hy-s-wrench" viewBox="0 0 200 200">
-        <path transform="translate(8 12)" d="M140 32a36 36 0 0 0-42 46L40 136a15 15 0 0 0 22 22l58-58a36 36 0 0 0 46-42l-21 21-19-6-6-19z" fill="#000" opacity=".35" filter="url(#hy-f-b4)" />
-        <path d="M140 32a36 36 0 0 0-42 46L40 136a15 15 0 0 0 22 22l58-58a36 36 0 0 0 46-42l-21 21-19-6-6-19z" fill="url(#hy-g-chrome)" />
-        <path d="M140 32a36 36 0 0 0-42 46L40 136a15 15 0 0 0 22 22l58-58a36 36 0 0 0 46-42l-21 21-19-6-6-19z" fill="none" stroke="#1f2328" strokeOpacity=".55" strokeWidth="1" />
-        <path d="M47 141 101 87" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" opacity=".85" />
-        <path d="M58 152 112 98" stroke="#2c3138" strokeWidth="1.4" strokeLinecap="round" opacity=".45" />
-        <path d="M104 50a32 32 0 0 1 28-16" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" opacity=".8" />
-        <circle cx="51" cy="147" r="5.5" fill="#1a1d21" />
-        <path d="M47 150a5.5 5.5 0 0 0 9-5" stroke="#fff" strokeOpacity=".6" fill="none" />
-        <text transform="rotate(-45 82 116)" x="82" y="118.5" textAnchor="middle" fill="#3c434c" opacity=".55" style={{ font: "600 6px 'Instrument Sans',sans-serif", letterSpacing: "2px" } as CSSProperties}>HEARTHLY PRO</text>
-      </symbol>
+{/* PURIFIER — clearer cylindrical appliance */}
+<symbol id="hy-s-wind" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="169" rx="46" ry="9" fill="#000" opacity=".2" filter="url(#hy-f-b8)" />
+  <path d="M62 52V158a38 12 0 0 0 76 0V52Z" fill="url(#hy-g-cyl)" />
+  <path d="M62 63V157a38 12 0 0 0 76 0V63Z" fill="url(#hy-p-mesh)" opacity=".55" />
+  <path d="M70 67V153" stroke="#fff" strokeOpacity=".55" strokeWidth="3" strokeLinecap="round" />
+  <path d="M130 68V151" stroke="#8c877e" strokeOpacity=".35" strokeWidth="2" />
+  <ellipse cx="100" cy="52" rx="38" ry="11" fill="url(#hy-g-cap)" />
+  <ellipse cx="100" cy="51" rx="29" ry="7" fill="#161a1d" />
+  <ellipse cx="100" cy="51" rx="23" ry="5" fill="none" stroke="#7be0a6" strokeWidth="2" filter="url(#hy-f-glow)" />
+  <circle cx="100" cy="51" r="2" fill="#c8ffe0" />
+  <path d="M62 158a38 12 0 0 0 76 0" fill="none" stroke="#a9a297" strokeWidth="1.2" />
+  <circle cx="100" cy="150" r="2.5" fill="#7be0a6" filter="url(#hy-f-glow)" />
+</symbol>
 
-      <symbol id="hy-s-wind" viewBox="0 0 200 200">
-        <ellipse cx="100" cy="170" rx="52" ry="10" fill="#000" opacity=".35" filter="url(#hy-f-b4)" />
-        <path d="M62 52v110a38 10 0 0 0 76 0V52z" fill="url(#hy-g-cyl)" />
-        <path d="M62 52v110a38 10 0 0 0 76 0V52z" fill="url(#hy-p-mesh)" />
-        <path d="M62 64a38 10 0 0 0 76 0" fill="none" stroke="#000" strokeOpacity=".1" strokeWidth="2" />
-        <rect x="84" y="62" width="7" height="96" rx="3.5" fill="#fff" opacity=".45" filter="url(#hy-f-b2)" />
-        <ellipse cx="100" cy="52" rx="38" ry="10" fill="url(#hy-g-cap)" />
-        <ellipse cx="100" cy="52" rx="29" ry="7.3" fill="#121416" />
-        <ellipse cx="100" cy="52" rx="24" ry="5.8" fill="none" stroke="#7be0a6" strokeWidth="2" filter="url(#hy-f-glow)" />
-        <ellipse cx="92" cy="50" rx="8" ry="1.6" fill="#fff" opacity=".25" />
-        <circle cx="100" cy="150" r="2" fill="#7be0a6" filter="url(#hy-f-glow)" />
-      </symbol>
+{/* ORB — warmer, less overexposed, more intentional lighting */}
+<>
+  <symbol id="hy-s-orb" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="174" rx="43" ry="7" fill="#45180b" opacity=".3" filter="url(#hy-f-b8)" />
+    <ellipse cx="100" cy="96" rx="78" ry="19" transform="rotate(-16 100 96)" fill="none" stroke="url(#hy-g-irid)" strokeWidth="1.4" opacity=".55" />
+    <circle cx="100" cy="96" r="59" fill="url(#hy-g-orb)" />
+    <circle cx="100" cy="96" r="58" fill="none" stroke="#ffd6a1" strokeOpacity=".45" strokeWidth="1.2" />
+    <ellipse cx="80" cy="69" rx="19" ry="10" transform="rotate(-32 80 69)" fill="#fff" opacity=".28" filter="url(#hy-f-b4)" />
+    <ellipse cx="78" cy="67" rx="8" ry="4" transform="rotate(-32 78 67)" fill="#fff" opacity=".75" />
+    <circle cx="72" cy="65" r="2.5" fill="#fff" />
+    <path d="M148 126A59 59 0 0 1 82 153" fill="none" stroke="#fff" strokeOpacity=".5" strokeWidth="2" strokeLinecap="round" />
+    <g transform="rotate(-16 100 96)">
+      <path d="M21 96A79 19 0 0 0 179 96" fill="none" stroke="url(#hy-g-irid)" strokeWidth="1.5" />
+      <circle cx="100" cy="115" r="3" fill="#fff" filter="url(#hy-f-glow)" />
+    </g>
+  </symbol>
 
-      <symbol id="hy-s-orb" viewBox="0 0 200 200">
-        <ellipse cx="100" cy="178" rx="52" ry="8" fill="#3a1206" opacity=".4" filter="url(#hy-f-b4)" />
-        <ellipse cx="100" cy="176" rx="40" ry="6" fill="#ffb25c" opacity=".55" filter="url(#hy-f-b4)" />
-        <ellipse cx="100" cy="96" rx="90" ry="22" transform="rotate(-16 100 96)" fill="none" stroke="url(#hy-g-irid)" strokeWidth="1.2" opacity=".5" />
-        <circle cx="100" cy="96" r="60" fill="url(#hy-g-orb)" />
-        <circle cx="112" cy="110" r="28" fill="#fff4dc" opacity=".45" filter="url(#hy-f-b8)" />
-        <circle cx="100" cy="96" r="59" fill="none" stroke="url(#hy-g-irid)" strokeWidth="2.5" opacity=".55" filter="url(#hy-f-b2)" />
-        <path d="M148 132A60 60 0 0 1 79.5 152.4" stroke="#fff" strokeOpacity=".55" strokeWidth="2" fill="none" filter="url(#hy-f-b2)" />
-        <ellipse cx="80" cy="70" rx="22" ry="12" transform="rotate(-32 80 70)" fill="url(#hy-g-spec)" opacity=".9" />
-        <circle cx="74" cy="66" r="4" fill="#fff" />
-        <g transform="rotate(-16 100 96)"><path d="M10 96A90 22 0 0 0 190 96" fill="none" stroke="url(#hy-g-irid)" strokeWidth="1.6" /><circle cx="100" cy="118" r="3.6" fill="#fff" filter="url(#hy-f-glow)" /></g>
-      </symbol>
+  <symbol id="hy-s-spark" viewBox="0 0 24 24">
+    <path d="M12 2.5c1.2 5 2.5 7.3 8.5 9.5-6 1.8-7.3 4.2-8.5 9.5-1.2-5.3-2.5-7.7-8.5-9.5 6-2.2 7.3-4.5 8.5-9.5Z" fill="currentColor" />
+  </symbol>
+</>
 
-      <symbol id="hy-s-spark" viewBox="0 0 24 24"><path d="M12 2c.6 4.8 2.7 7.2 8 8-5.3.8-7.4 3.2-8 8-.6-4.8-2.7-7.2-8-8 5.3-.8 7.4-3.2 8-8z" fill="currentColor" /></symbol>
-      {/* Hearthly mark: a home with a diya flame watching over it, in the Indian ember/kesar palette. */}
-      <symbol id="hy-s-logo" viewBox="0 0 28 28">
-        <rect width="28" height="28" rx="8" fill="#1D1530" />
-        <path d="M6 15 14 7.5 22 15V22H6Z" fill="#F6F2EA" />
-        <path d="M14 15.4C12.8 13.4 13.6 12.3 14 11C14.4 12.3 15.2 13.4 14 15.4Z" fill="#D6336C" />
-        <path d="M14 15.6C13 16.6 13 17.7 14 18.6C15 17.7 15 16.6 14 15.6Z" fill="#F59F00" />
-      </symbol>
+{/* HEARTHLY BRAND MARK */}
+<symbol id="hy-s-logo" viewBox="0 0 28 28">
+  <rect width="28" height="28" rx="8" fill="#21182d" />
+  <path d="M5.5 14.5 14 7l8.5 7.5V22H5.5Z" fill="#f6f2ea" />
+  <path d="M14 10.5c-1.2 2.1-2.7 3.8-2.7 5.5a2.7 2.7 0 0 0 5.4 0c0-1.7-1.5-3.4-2.7-5.5Z" fill="#e65c48" />
+  <path d="M14 15.2c-.9 1.1-1.3 1.8-1.3 2.5a1.3 1.3 0 0 0 2.6 0c0-.7-.4-1.4-1.3-2.5Z" fill="#ffbd55" />
+</symbol>
+        <filter id="hy-f-b2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2" /></filter>
+        <filter id="hy-f-b4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" /></filter>
+        <filter id="hy-f-b8" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" /></filter>
+        <filter id="hy-f-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        <filter id="hy-f-brush" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.2 .015" numOctaves="2" seed="4" /><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .9 0 0 0 -.35" /><feComposite in2="SourceGraphic" operator="in" /></filter>
+        <pattern id="hy-p-grille" width="3.4" height="3.4" patternUnits="userSpaceOnUse"><circle cx="1.7" cy="1.7" r=".75" fill="#000" opacity=".75" /></pattern>
+        <pattern id="hy-p-mesh" width="2.4" height="2.4" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r=".55" fill="#000" opacity=".2" /></pattern>
+        <linearGradient id="hy-g-metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#fdfdfc" /><stop offset=".22" stopColor="#c4c6c5" /><stop offset=".42" stopColor="#f6f6f4" /><stop offset=".58" stopColor="#8c8e8d" /><stop offset=".78" stopColor="#e3e4e2" /><stop offset="1" stopColor="#a2a4a3" /></linearGradient>
+        <radialGradient id="hy-g-glass" cx=".42" cy=".32" r=".8"><stop offset="0" stopColor="#2c3034" /><stop offset=".6" stopColor="#0e1012" /><stop offset="1" stopColor="#040405" /></radialGradient>
+        <linearGradient id="hy-g-arc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#ffc56b" /><stop offset="1" stopColor="#ff5a1f" /></linearGradient>
+        <linearGradient id="hy-g-refl" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stopColor="#fff" stopOpacity=".22" /><stop offset="1" stopColor="#fff" stopOpacity="0" /></linearGradient>
+        <mask id="hy-m-arc"><circle cx="100" cy="100" r="54" fill="none" stroke="#fff" strokeWidth="12" strokeDasharray="130 400" transform="rotate(135 100 100)" /></mask>
+        <radialGradient id="hy-g-water" cx=".56" cy=".72" r=".75"><stop offset="0" stopColor="#f5fcff" /><stop offset=".22" stopColor="#a7dbf5" /><stop offset=".55" stopColor="#3f96cc" /><stop offset=".85" stopColor="#14507f" /><stop offset="1" stopColor="#0a2c4b" /></radialGradient>
+        <clipPath id="hy-cp-drop"><path d="M100 24C118 56 144 86 144 120a44 44 0 0 1-88 0C56 86 82 56 100 24z" /></clipPath>
+        <linearGradient id="hy-g-wall-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fbf7ef" /><stop offset="1" stopColor="#d8cfbf" /></linearGradient>
+        <linearGradient id="hy-g-wall-r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#a7a094" /><stop offset="1" stopColor="#77716a" /></linearGradient>
+        <linearGradient id="hy-g-roof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#4a4d50" /><stop offset="1" stopColor="#1f2022" /></linearGradient>
+        <linearGradient id="hy-g-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff1c9" /><stop offset=".55" stopColor="#ffc56b" /><stop offset="1" stopColor="#e98a2c" /></linearGradient>
+        <linearGradient id="hy-g-glassw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#3d5f7a" /><stop offset=".6" stopColor="#132535" /><stop offset="1" stopColor="#2a3d4c" /></linearGradient>
+        <linearGradient id="hy-g-grass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#a9cf86" /><stop offset="1" stopColor="#4f7d3f" /></linearGradient>
+        <radialGradient id="hy-g-tree" cx=".35" cy=".3" r=".8"><stop offset="0" stopColor="#b3d98a" /><stop offset=".55" stopColor="#4f7e3a" /><stop offset="1" stopColor="#253f1c" /></radialGradient>
+        <linearGradient id="hy-g-solar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#2d4f72" /><stop offset="1" stopColor="#0b1726" /></linearGradient>
+        <linearGradient id="hy-g-plastic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#ffffff" /><stop offset=".5" stopColor="#f1eee8" /><stop offset="1" stopColor="#cdc7bd" /></linearGradient>
+        <linearGradient id="hy-g-panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#22262a" /><stop offset="1" stopColor="#060708" /></linearGradient>
+        <linearGradient id="hy-g-darkalu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#6b7076" /><stop offset=".18" stopColor="#3a3e43" /><stop offset=".6" stopColor="#24272b" /><stop offset="1" stopColor="#141618" /></linearGradient>
+        <radialGradient id="hy-g-lens" cx=".4" cy=".35" r=".7"><stop offset="0" stopColor="#3b5d8c" /><stop offset=".45" stopColor="#101b2e" /><stop offset="1" stopColor="#000" /></radialGradient>
+        <linearGradient id="hy-g-chrome" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#ffffff" /><stop offset=".18" stopColor="#b3b9bf" /><stop offset=".34" stopColor="#f4f6f8" /><stop offset=".48" stopColor="#555c66" /><stop offset=".6" stopColor="#dfe3e7" /><stop offset=".8" stopColor="#868d96" /><stop offset="1" stopColor="#eef1f4" /></linearGradient>
+        <linearGradient id="hy-g-leaf" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stopColor="#244d22" /><stop offset=".45" stopColor="#4f8c3a" /><stop offset="1" stopColor="#a6d46e" /></linearGradient>
+        <radialGradient id="hy-g-dew" cx=".4" cy=".65" r=".7"><stop offset="0" stopColor="#efffe0" /><stop offset=".6" stopColor="#8cc466" /><stop offset="1" stopColor="#1d4a1a" /></radialGradient>
+        <linearGradient id="hy-g-cyl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#bdb7ad" /><stop offset=".3" stopColor="#f3f0ea" /><stop offset=".48" stopColor="#ffffff" /><stop offset=".82" stopColor="#d6d0c6" /><stop offset="1" stopColor="#a39d93" /></linearGradient>
+        <radialGradient id="hy-g-cap" cx=".4" cy=".3" r=".8"><stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="#dcd7cf" /></radialGradient>
+        <radialGradient id="hy-g-orb" cx=".5" cy=".5" fx=".36" fy=".3" r=".55"><stop offset="0" stopColor="#fffaf0" /><stop offset=".16" stopColor="#ffe2a6" /><stop offset=".4" stopColor="#ffb25c" /><stop offset=".68" stopColor="#ee6630" /><stop offset=".9" stopColor="#8a2412" /><stop offset="1" stopColor="#3a0d06" /></radialGradient>
+        <linearGradient id="hy-g-irid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#8fdcff" /><stop offset=".5" stopColor="#d39bff" /><stop offset="1" stopColor="#ffb25c" /></linearGradient>
+        <radialGradient id="hy-g-spec" cx=".5" cy=".5" r=".5"><stop offset="0" stopColor="#fff" /><stop offset="1" stopColor="#fff" stopOpacity="0" /></radialGradient>
       </defs>
     </svg>
   );
