@@ -6,7 +6,7 @@ const letters = (s: string) => s.split("").map((ch, i) => <span key={i} classNam
 
 /** The swarm fetches the letters, then rests on the credits. */
 export function Finale({ c }: { c: SwarmContent }) {
-  const { finale, meta, hero, crew } = c
+  const { finale, meta, crew } = c
   return (
     <section className="ov-stage ov-sec ov-fin" data-stage="finale" aria-labelledby="ov-fin-h">
       <i className="ov-rule" data-k="rule" aria-hidden="true" />
