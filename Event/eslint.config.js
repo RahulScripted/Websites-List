@@ -24,6 +24,7 @@ export default defineConfig([
     files: ['src/components/ui/**/*.tsx', 'src/components/swarm/index.tsx'],
     rules: {
       'react-hooks/set-state-in-effect': 'off',
+      'react-refresh/only-export-components': 'off',
     },
   },
 ])

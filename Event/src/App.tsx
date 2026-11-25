@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { ArcRevealHero } from "@/components/ui/arc-preloader-hero"
 import Swarm from "@/components/swarm"
 import { CONTENT } from "@/components/swarm/content"
+import { SmoothScroll } from "@/components/ui/smooth-scroll"
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -22,6 +23,8 @@ export default function App() {
   }, [ready])
 
   return (
+    <>
+    <SmoothScroll enabled={ready} />
     <ArcRevealHero
       greetings={preloader.greetings}
       greetingHold={preloader.hold}
@@ -34,5 +37,6 @@ export default function App() {
     >
       <Swarm content={CONTENT} start={ready} />
     </ArcRevealHero>
+    </>
   )
 }
