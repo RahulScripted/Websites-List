@@ -16,8 +16,6 @@ import { Pricing } from "@/components/hearthly/sections/Pricing";
 import { Faq } from "@/components/hearthly/sections/Faq";
 import { Contact } from "@/components/hearthly/sections/Contact";
 import { Footer } from "@/components/hearthly/sections/Footer";
-import "@/components/hearthly/hearthly.css";
-import "@/components/hearthly/hearthly.page.css";
 
 /**
  * Hearthly: an AI home-care landing page in the InstaLanding "Hearthly" design system (hearthly@1.0.0).

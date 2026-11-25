@@ -89,8 +89,8 @@ export function Sprite() {
         <circle cx="100" cy="100" r="54" fill="none" stroke="#ff7a2e" strokeWidth="9" strokeDasharray="130 400" transform="rotate(135 100 100)" opacity=".5" filter="url(#hy-f-b4)" />
         <circle cx="100" cy="100" r="54" fill="none" stroke="url(#hy-g-arc)" strokeWidth="6" strokeDasharray=".8 2.97" mask="url(#hy-m-arc)" />
         <circle cx="102.8" cy="46.1" r="3.4" fill="#fff" filter="url(#hy-f-glow)" />
-        <text x="100" y="112" textAnchor="middle" fill="#fff" style={{ font: "300 36px 'Instrument Sans',sans-serif", letterSpacing: "-1px" } as CSSProperties}>68°</text>
-        <text x="100" y="130" textAnchor="middle" fill="#ff9a4a" style={{ font: "600 7px 'Instrument Sans',sans-serif", letterSpacing: "2px" } as CSSProperties}>HEATING</text>
+        <text x="100" y="112" textAnchor="middle" fill="#fff" style={{ font: "300 36px 'Instrument Sans',sans-serif", letterSpacing: "-1px" } as CSSProperties}>24°</text>
+        <text x="100" y="130" textAnchor="middle" fill="#ff9a4a" style={{ font: "600 7px 'Instrument Sans',sans-serif", letterSpacing: "2px" } as CSSProperties}>COOLING</text>
         <path d="M40 90A62 62 0 0 1 152 66C120 52 70 58 40 90z" fill="url(#hy-g-refl)" />
         <ellipse cx="66" cy="36" rx="28" ry="5" transform="rotate(-30 66 36)" fill="#fff" opacity=".9" filter="url(#hy-f-b2)" />
       </symbol>
@@ -199,7 +199,13 @@ export function Sprite() {
       </symbol>
 
       <symbol id="hy-s-spark" viewBox="0 0 24 24"><path d="M12 2c.6 4.8 2.7 7.2 8 8-5.3.8-7.4 3.2-8 8-.6-4.8-2.7-7.2-8-8 5.3-.8 7.4-3.2 8-8z" fill="currentColor" /></symbol>
-      <symbol id="hy-s-logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="8" fill="#14130f" /><path d="M7 14.5 14 8.5l7 6V21H7z" fill="#f6f2ea" /><circle cx="14" cy="15.5" r="2.6" fill="#f2b544" /></symbol>
+      {/* Hearthly mark: a home with a diya flame watching over it, in the Indian ember/kesar palette. */}
+      <symbol id="hy-s-logo" viewBox="0 0 28 28">
+        <rect width="28" height="28" rx="8" fill="#1D1530" />
+        <path d="M6 15 14 7.5 22 15V22H6Z" fill="#F6F2EA" />
+        <path d="M14 15.4C12.8 13.4 13.6 12.3 14 11C14.4 12.3 15.2 13.4 14 15.4Z" fill="#D6336C" />
+        <path d="M14 15.6C13 16.6 13 17.7 14 18.6C15 17.7 15 16.6 14 15.6Z" fill="#F59F00" />
+      </symbol>
       </defs>
     </svg>
   );

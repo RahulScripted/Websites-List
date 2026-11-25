@@ -34,7 +34,7 @@ export function Footer() {
 
         <div className="hy-foot__grid">
           <div className="hy-foot__brand">
-            <a className="hy-logo" href="#top"><svg viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#eee9df" /><path d="M7 14.5 14 8.5l7 6V21H7z" fill="#0b110f" /><circle cx="14" cy="15.5" r="2.6" fill="#f2b544" /></svg>Hearthly</a>
+            <a className="hy-logo" href="#top"><svg viewBox="0 0 28 28" aria-hidden="true"><use href="#hy-s-logo" /></svg>Hearthly</a>
             <p className="hy-foot__about">The AI that keeps an eye on your home's water, heat, power, air and safety, and books a trusted pro the moment something needs fixing.</p>
             <span className="hy-status"><i></i>All systems monitoring normally</span>
           </div>
@@ -72,7 +72,7 @@ export function Footer() {
 
         <div className="hy-foot__base">
           <div className="hy-foot__legal">
-              <span>© 2026 Hearthly, Inc.</span>
+              <span>© 2026 Hearthly Technologies Pvt. Ltd.</span>
               {legalLinks.map((label) => (
                 <a key={label} className="hy-link" href="#top">
                   {label}

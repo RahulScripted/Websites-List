@@ -11,9 +11,9 @@ export function Process() {
         <figure className="hy-process__photo hy-tab-r">
           <div className="hy-art hy-g-night">
             <div className="hy-convo" aria-label="Example conversation with Hearthly">
-              <div className="hy-msg hy-msg--ai"><span className="hy-msg__who">Hearthly</span>Your water heater took 40% longer to recover this morning. Sediment build-up is the likely cause.</div>
+              <div className="hy-msg hy-msg--ai"><span className="hy-msg__who">Hearthly</span>Your geyser took 40% longer to heat this morning. Scale build-up is the likely cause.</div>
               <div className="hy-msg hy-msg--me">Is it urgent?</div>
-              <div className="hy-msg hy-msg--ai"><span className="hy-msg__who">Hearthly</span>Not yet, but a flush now adds years to its life. Rosa's Plumbing can come Friday.<div className="hy-msg__card"><span>Flush + anode check</span><b>$120 fixed</b></div></div>
+              <div className="hy-msg hy-msg--ai"><span className="hy-msg__who">Hearthly</span>Not yet, but a descale now adds years to its life. Sharma Plumbing can come Friday.<div className="hy-msg__card"><span>Descale + element check</span><b>₹1,200 fixed</b></div></div>
               <div className="hy-msg hy-msg--me">Book it 👍</div>
               <div className="hy-typing" aria-hidden="true"><i></i><i></i><i></i></div>
             </div>

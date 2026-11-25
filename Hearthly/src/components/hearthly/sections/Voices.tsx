@@ -58,7 +58,7 @@ export function Voices() {
           </p>
         </blockquote>
         <figcaption className="hy-voices__who">
-          <span className="hy-sign">Jonah P.</span>
+          <span className="hy-sign">Vikram P.</span>
           <span>Member since 2025</span>
         </figcaption>
       </figure>

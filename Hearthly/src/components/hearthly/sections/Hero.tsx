@@ -20,7 +20,7 @@ export function Hero() {
         </div>
         <div className="hy-wrap hy-collage">
           <div className="hy-collage__col hy-col-a">
-            <figure className="hy-look hy-look--xl hy-tab-l" style={{ "--hy-fd": "3.2s", "--hy-fdl": "0.0s", "--hy-fa": "-5px", "--hy-plate": "var(--hy-ember)" } as CSSProperties}><div className="hy-art hy-g-ember" role="img" aria-label="Smart thermostat set to 68 degrees"><svg className="hy-ico" viewBox="0 0 200 200" style={{ "--hy-s": "78%" } as CSSProperties}><use href="#hy-s-thermo" /></svg></div></figure>
+            <figure className="hy-look hy-look--xl hy-tab-l" style={{ "--hy-fd": "3.2s", "--hy-fdl": "0.0s", "--hy-fa": "-5px", "--hy-plate": "var(--hy-ember)" } as CSSProperties}><div className="hy-art hy-g-ember" role="img" aria-label="Smart AC thermostat set to 24 degrees"><svg className="hy-ico" viewBox="0 0 200 200" style={{ "--hy-s": "78%" } as CSSProperties}><use href="#hy-s-thermo" /></svg></div></figure>
             <figure className="hy-look hy-look--sm" style={{ "--hy-fd": "3.9s", "--hy-fdl": "-0.6s", "--hy-fa": "5px", "--hy-plate": "var(--hy-amber)" } as CSSProperties}><div className="hy-art hy-g-amber"></div><div className="hy-chip"><span className="hy-chip__ic"><svg viewBox="0 0 24 24"><use href="#hy-s-spark" /></svg></span><span><b>Filter swap booked</b><small>Thu · 9:00 am</small></span></div></figure>
           </div>
           <div className="hy-collage__col hy-col-b">
@@ -36,7 +36,7 @@ export function Hero() {
           </div>
           <div className="hy-collage__col hy-col-e">
             <figure className="hy-look hy-look--xl hy-tab-r" style={{ "--hy-fd": "4.6s", "--hy-fdl": "-3.0s", "--hy-fa": "5px", "--hy-plate": "var(--hy-sage)" } as CSSProperties}><div className="hy-art hy-g-sage" role="img" aria-label="Security shield with a check mark"><svg className="hy-ico" viewBox="0 0 200 200" style={{ "--hy-s": "72%" } as CSSProperties}><use href="#hy-s-shield" /></svg></div></figure>
-            <figure className="hy-look hy-look--sm" style={{ "--hy-fd": "3.2s", "--hy-fdl": "-3.6s", "--hy-fa": "-5px", "--hy-plate": "var(--hy-pine)" } as CSSProperties}><div className="hy-art hy-g-pine"></div><div className="hy-chip"><span className="hy-chip__ic"><svg viewBox="0 0 24 24"><use href="#hy-s-spark" /></svg></span><span><b>Saved $46 this month</b><small>Off-peak charging</small></span></div></figure>
+            <figure className="hy-look hy-look--sm" style={{ "--hy-fd": "3.2s", "--hy-fdl": "-3.6s", "--hy-fa": "-5px", "--hy-plate": "var(--hy-pine)" } as CSSProperties}><div className="hy-art hy-g-pine"></div><div className="hy-chip"><span className="hy-chip__ic"><svg viewBox="0 0 24 24"><use href="#hy-s-spark" /></svg></span><span><b>Saved ₹1,850 this month</b><small>Off-peak charging</small></span></div></figure>
           </div>
         </div>
       
@@ -46,7 +46,7 @@ export function Hero() {
                   <NightScene />
                 </div>
                 <div className="hy-wrap hy-flood__text">
-                  <h2 className="hy-flood__title">It notices the drip before the ceiling does. Then it books the plumber.</h2>
+                  <h2 className="hy-flood__title">It notices the seepage before the ceiling does. Then it books the plumber.</h2>
                   <p className="hy-flood__lead">Hearthly listens to your home's systems around the clock, explains what it finds in plain English, and lines up a vetted local pro before a small fix becomes a big bill.</p>
                 </div>
               </div>

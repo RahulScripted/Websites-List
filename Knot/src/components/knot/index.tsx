@@ -15,7 +15,6 @@ import { Pricing } from "@/components/knot/sections/Pricing";
 import { Faq } from "@/components/knot/sections/Faq";
 import { Closing } from "@/components/knot/sections/Closing";
 import { Footer } from "@/components/knot/sections/Footer";
-import "@/components/knot/knot.css";
 
 /**
  * Knot: a fictional AI automation tool. Describe a chore in one sentence and Knot wires the apps, tests the steps

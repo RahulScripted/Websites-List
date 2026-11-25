@@ -73,7 +73,7 @@ export const bars: Bar[] = [
     "tone": 2
   },
   {
-    "label": "Heating & cooling",
+    "label": "Cooling & AC",
     "value": 27,
     "tone": 1
   },
@@ -88,7 +88,7 @@ export const bars: Bar[] = [
     "tone": 3
   },
   {
-    "label": "Roof & exterior",
+    "label": "Terrace & exterior",
     "value": 9,
     "tone": 5
   }
@@ -97,33 +97,33 @@ export const bars: Bar[] = [
 export const reviews: Review[] = [
   {
     "text": "First-time homeowner. Hearthly basically taught me how my house works, one notification at a time.",
-    "name": "Ana",
-    "city": "Portland"
+    "name": "Anaya",
+    "city": "Pune"
   },
   {
     "text": "The fixed prices are the real win. No more “we'll see when we get there.”",
-    "name": "Theo",
-    "city": "Austin"
+    "name": "Rohit",
+    "city": "Hyderabad"
   },
   {
-    "text": "I manage my mum's house from two states away. This is the first time that hasn't felt stressful.",
+    "text": "I manage my mum's flat from another city. This is the first time that hasn't felt stressful.",
     "name": "Priya",
-    "city": "Chicago"
+    "city": "Mumbai"
   },
   {
-    "text": "It found a $500 heat pump rebate I had no idea existed. Paid for three years of membership.",
-    "name": "Lucas",
-    "city": "Denver"
+    "text": "It found a ₹10,000 solar subsidy I had no idea existed. Paid for three years of membership.",
+    "name": "Kabir",
+    "city": "Bengaluru"
   },
   {
-    "text": "The autumn plan is genius. Gutters, furnace, outdoor taps, all done before I thought about any of it.",
-    "name": "Sofia",
-    "city": "Seattle"
+    "text": "The pre-monsoon plan is genius. Terrace, AC, water tank, all done before I thought about any of it.",
+    "name": "Ishita",
+    "city": "Chennai"
   },
   {
     "text": "When we sold, the buyer's inspector asked for our home record. Every repair, every receipt. Closed in a week.",
-    "name": "Marcus",
-    "city": "Raleigh"
+    "name": "Sameer",
+    "city": "Ahmedabad"
   }
 ];
 
@@ -153,8 +153,8 @@ export const faqs: Faq[] = [
 export const plans: Plan[] = [
   {
     "name": "Essentials",
-    "monthly": "$0",
-    "yearly": "$0",
+    "monthly": "₹0",
+    "yearly": "₹0",
     "text": "Ask anything about your home and book fixed-price repairs whenever you need them.",
     "features": [
       "AI diagnosis from a photo or message",
@@ -166,8 +166,8 @@ export const plans: Plan[] = [
   },
   {
     "name": "Home Plus",
-    "monthly": "$14",
-    "yearly": "$140",
+    "monthly": "₹499",
+    "yearly": "₹4,990",
     "text": "24/7 monitoring, a seasonal plan for your house, and member pricing on every job.",
     "features": [
       "Everything in Essentials",
@@ -182,8 +182,8 @@ export const plans: Plan[] = [
   },
   {
     "name": "Concierge",
-    "monthly": "$39",
-    "yearly": "$390",
+    "monthly": "₹1,299",
+    "yearly": "₹12,990",
     "text": "A named home advisor who knows your house, plus project planning for the big stuff.",
     "features": [
       "Everything in Home Plus",

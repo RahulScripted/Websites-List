@@ -11,7 +11,6 @@ import { Programme } from "@/components/swarm/sections/Programme"
 import { Passes } from "@/components/swarm/sections/Passes"
 import { Faq } from "@/components/swarm/sections/Faq"
 import { Finale } from "@/components/swarm/sections/Finale"
-import "@/components/swarm/swarm.css"
 
 if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger)
 

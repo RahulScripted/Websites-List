@@ -13,7 +13,7 @@ export function Systems() {
       <ul className="hy-wrap hy-plates">
         <li className="hy-plate hy-tone-1" style={{ "--hy-arch": "0.000" } as CSSProperties}>
           <figure className="hy-plate__card hy-tab-l"><div className="hy-art hy-g-ember" role="img" aria-label="Thermostat dial"><svg className="hy-ico" viewBox="0 0 200 200"><use href="#hy-s-thermo" /></svg></div><span className="hy-plate__wash" aria-hidden="true"></span>
-            <figcaption className="hy-plate__cap"><h3 className="hy-plate__name">Heat</h3><p className="hy-plate__count">96 checks a day</p></figcaption></figure>
+            <figcaption className="hy-plate__cap"><h3 className="hy-plate__name">Cooling</h3><p className="hy-plate__count">96 checks a day</p></figcaption></figure>
         </li>
         <li className="hy-plate hy-tone-3" style={{ "--hy-arch": "0.500" } as CSSProperties}>
           <figure className="hy-plate__card hy-tab-l"><div className="hy-art hy-g-sage" role="img" aria-label="Air flow lines"><svg className="hy-ico" viewBox="0 0 200 200"><use href="#hy-s-wind" /></svg></div><span className="hy-plate__wash" aria-hidden="true"></span>
