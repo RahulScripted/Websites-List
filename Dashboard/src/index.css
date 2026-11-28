@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Maps the dashboard's own CSS variables (set on .st-root, light/dark) to Tailwind v4's
+   semantic color utilities (bg-card, text-muted-foreground, border-border, etc.) so those
+   classes actually generate CSS instead of resolving to nothing. */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #131a15;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
