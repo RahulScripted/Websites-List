@@ -6,7 +6,7 @@ import { NOTICES, PEOPLE, SEED_PROJECTS, SEED_TASKS, SEED_TEAM, TAGS, TINTS } fr
 import { STYLE } from "./lib/styles"
 import { dayOffset, daysBetween, hms, iso, noon, parseIso, slug } from "./lib/helpers"
 import { viewV } from "./lib/variants"
-import type { DialogKind, Field, FullView, Member, Notice, Pri, Profile, Project, Stats, Tag, Task, Theme, View, SetuDashboardProps } from "@/types/dashboard"
+import type { DialogKind, Field, FullView, Member, Notice, Pri, Profile, Project, Stats, Tag, Task, Theme, View, SetuDashboardProps } from "@/types"
 
 const mailFor = (name: string, ws: string) => `${slug(name.split(" ")[0] ?? "aarav")}@${slug(ws)}.in`
 

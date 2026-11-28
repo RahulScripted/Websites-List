@@ -1,7 +1,7 @@
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent, type ReactNode, type RefObject } from "react"
 import { AnimatePresence, animate, motion, useAnimate, useMotionValue, useReducedMotion, useSpring } from "motion/react"
 import { ArrowUpRight, Bell, CalendarDays, Check, ChevronLeft, ChevronRight, ChevronUp, Clock, Ellipsis, Flag, Lock, MessageSquare, Moon, Palette, Pause, Play, Plus, Square, Sun, UserPlus, UserRound, Video, X, type LucideIcon } from "lucide-react"
-import type { CalEvent, CalendarViewProps, DashProps, DragState, Field, FullView, Kind, Notice, Person, Profile, RadioOpt, SetTab, SettingsViewProps, Status, Task, TaskFilter, TasksViewProps, Theme, View } from "@/types/dashboard"
+import type { CalEvent, CalendarViewProps, DashProps, DragState, Field, FullView, Kind, Notice, Person, Profile, RadioOpt, SetTab, SettingsViewProps, Status, Task, TaskFilter, TasksViewProps, Theme, View } from "@/types"
 import { E_IN, E_INOUT, E_OUT, E_P4, ampm, dayOffset, dueLabel, fmtDayLong, fmtDow, fmtDowShort, fmtFull, fmtMon, fmtMonth, hms, initials, iso, moveTask, ms, parseIso } from "./lib/helpers"
 import { cardV, fileV, rowV } from "./lib/variants"
 import { BARS, EVENTS, FULL, KINDS, ME, NAV, NAV_GROUPS, PRI_LABEL, STATUSES, TINTS } from "./data"

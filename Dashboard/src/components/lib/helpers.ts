@@ -1,4 +1,4 @@
-import type { Status, Task } from "@/types/dashboard"
+import type { Status, Task } from "@/types"
 
 export const E_OUT: [number, number, number, number] = [0.22, 1, 0.36, 1]
 export const E_P4: [number, number, number, number] = [0.16, 1, 0.3, 1]

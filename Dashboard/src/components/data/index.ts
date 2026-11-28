@@ -7,7 +7,7 @@ import {
   SquareCheckBig,
   Users,
 } from "lucide-react"
-import type { CalEvent, FullView, Kind, Member, NavItem, Notice, Person, Pri, Project, Status, Tag, Task } from "@/types/dashboard"
+import type { CalEvent, FullView, Kind, Member, NavItem, Notice, Person, Pri, Project, Status, Tag, Task } from "@/types"
 
 /** The signed-in teammate's id inside PEOPLE. */
 export const ME = "tm"
